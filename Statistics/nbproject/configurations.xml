@@ -34,12 +34,6 @@
         <compilerSet>default</compilerSet>
       </toolsSet>
       <compileType>
-        <ccTool>
-          <commandLine>`wx-config --cxxflags`</commandLine>
-        </ccTool>
-        <linkerTool>
-          <commandLine>`wx-config --libs`</commandLine>
-        </linkerTool>
       </compileType>
     </conf>
     <conf name="Release" type="1">
