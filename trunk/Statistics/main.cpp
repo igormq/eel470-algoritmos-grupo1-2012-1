@@ -2,10 +2,11 @@
  * File:   main.cpp
  * Author: igormq
  *
- * Created on April 15, 2012, 12:20 AM
+ * Created on April 15, 2012, 12:50 AM
  */
 
 #include <cstdlib>
+#include <iostream>
 
 using namespace std;
 
@@ -13,7 +14,7 @@ using namespace std;
  * 
  */
 int main(int argc, char** argv) {
-
-    return 0;
+    cout << "Hello World!" << endl;
+    return EXIT_SUCCESS;
 }
 
