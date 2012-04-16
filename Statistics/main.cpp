@@ -7,6 +7,7 @@
 
 #include <cstdlib>
 #include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -14,7 +15,10 @@ using namespace std;
  * 
  */
 int main(int argc, char** argv) {
-    cout << "Hello World!" << endl;
+    string nome;
+    cout << "Qual seu nome?" << endl;
+    cin >> nome;
+    cout << "Seja bem vindo " << nome << "!" << endl;
     return EXIT_SUCCESS;
 }
 

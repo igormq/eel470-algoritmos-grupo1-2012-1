@@ -11,10 +11,17 @@
 #include<string>
 #include<vector>
 
-    class MyString : public std::string {
+    class MyString {
+    private:
+        std::string value;
     public:
+        MyString(const char*);
+        virtual ~MyString();
+        std::string getVal();
         bool toSafe();
-        std::vector<MyString> getWords();
+        std::vector<std::string> getWords();
+        MyString operator =(const char*);
+        bool operator ==(const char*);
     };
 
 #endif	/* MY_STRING_H */
