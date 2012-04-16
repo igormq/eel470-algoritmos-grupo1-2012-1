@@ -9,6 +9,7 @@
 #define	MYSTRINGTEST_CLASS_H
 
 #include <cppunit/extensions/HelperMacros.h>
+#include <algorithm>
 #include "../my_string.h"
 
 class mystringtest_class : public CPPUNIT_NS::TestFixture {
@@ -16,6 +17,11 @@ class mystringtest_class : public CPPUNIT_NS::TestFixture {
 
     CPPUNIT_TEST(testToSafeAccentuation);
     CPPUNIT_TEST(testToSafeAccentuationUpperCase);
+    CPPUNIT_TEST(testToSafeAll);
+
+    CPPUNIT_TEST(testGetWordsSimple);
+    CPPUNIT_TEST(testGetWordsWithComma);
+    CPPUNIT_TEST(testGetWordsFullPunctuated);
 
     CPPUNIT_TEST_SUITE_END();
 
@@ -28,6 +34,10 @@ public:
 private:
     void testToSafeAccentuation();
     void testToSafeAccentuationUpperCase();
+    void testToSafeAll();
+    void testGetWordsSimple();
+    void testGetWordsWithComma();
+    void testGetWordsFullPunctuated();
 };
 
 #endif	/* MYSTRINGTEST_CLASS_H */
