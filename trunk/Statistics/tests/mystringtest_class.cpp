@@ -62,5 +62,4 @@ void mystringtest_class::testGetWordsFullPunctuated(){
     std::string wordsCompare[] = {"testea","testeb","testec"};
     
     CPPUNIT_ASSERT(equal(wordsReturned.begin(), wordsReturned.end(),wordsCompare));
-    
 }

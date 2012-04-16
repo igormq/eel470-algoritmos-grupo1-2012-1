@@ -4,11 +4,15 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>Statistics.h</itemPath>
+      <itemPath>StringCounter.h</itemPath>
       <itemPath>my_string.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
                    projectFiles="true">
+      <itemPath>Statistics.cpp</itemPath>
+      <itemPath>StringCounter.cpp</itemPath>
       <itemPath>my_string.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="SourceFiles"
