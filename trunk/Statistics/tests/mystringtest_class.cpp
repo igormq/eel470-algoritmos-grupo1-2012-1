@@ -29,6 +29,38 @@ void mystringtest_class::testToSafeAccentuation() {
 }
 
 void mystringtest_class::testToSafeAccentuationUpperCase() {
-    CPPUNIT_ASSERT(true);
+    MyString myString = "TESTE AÇÃO";
+    myString.toSafe();
+    CPPUNIT_ASSERT(myString == "teste acao");
 }
 
+void mystringtest_class::testToSafeAll() {
+    MyString myString = "AÁÀÂÃÄEÉÈÊẼËIÍÌÎĨÏOÓÒÔÕÖUÚÙÛŨÜaáàâãäeéèêẽëiíìîĩïoóòôõöuúùûũüú";
+    myString.toSafe();
+    CPPUNIT_ASSERT(myString == "aaaaaaeeeeeeiiiiiioooooouuuuuuaaaaaaeeeeeeiiiiiioooooouuuuuu");
+}
+
+void mystringtest_class::testGetWordsSimple(){
+    MyString myString = "testea testeb testec";
+    std::vector<std::string> wordsReturned = myString.getWords();
+    std::string wordsCompare[] = {"testea","testeb","testec"};
+    
+    CPPUNIT_ASSERT(equal(wordsReturned.begin(), wordsReturned.end(),wordsCompare));
+}
+
+void mystringtest_class::testGetWordsWithComma(){
+    MyString myString = "testea, testeb, testec";
+    std::vector<std::string> wordsReturned = myString.getWords();
+    std::string wordsCompare[] = {"testea","testeb","testec"};
+    
+    CPPUNIT_ASSERT(equal(wordsReturned.begin(), wordsReturned.end(),wordsCompare));
+}
+
+void mystringtest_class::testGetWordsFullPunctuated(){
+    MyString myString = "testea, testeb, testec.";
+    std::vector<std::string> wordsReturned = myString.getWords();
+    std::string wordsCompare[] = {"testea","testeb","testec"};
+    
+    CPPUNIT_ASSERT(equal(wordsReturned.begin(), wordsReturned.end(),wordsCompare));
+    
+}
