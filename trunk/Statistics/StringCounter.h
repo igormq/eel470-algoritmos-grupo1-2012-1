@@ -11,17 +11,17 @@
 #include <string>
 
 class StringCounter {
+    int count;
+    std::string key;
 public:
     StringCounter(std::string);
     StringCounter(const StringCounter& orig);
     virtual ~StringCounter();
-    int getCount();
-    std::string getKey();
+    int getCount() const;
+    std::string getKey() const;
     StringCounter operator++();
-    bool operator<(StringCounter);
-private:
-    int count;
-    std::string key;
+    bool operator<(StringCounter) const;
+    bool operator==(StringCounter) const;
 };
 
 #endif	/* STRINGCOUNTER_H */

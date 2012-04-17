@@ -4,16 +4,16 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>Statistics.h</itemPath>
+      <itemPath>StringContainer.h</itemPath>
       <itemPath>StringCounter.h</itemPath>
-      <itemPath>my_string.h</itemPath>
+      <itemPath>StringStatistics.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
                    projectFiles="true">
-      <itemPath>Statistics.cpp</itemPath>
+      <itemPath>StringContainer.cpp</itemPath>
       <itemPath>StringCounter.cpp</itemPath>
-      <itemPath>my_string.cpp</itemPath>
+      <itemPath>StringStatistics.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
@@ -24,14 +24,6 @@
                    displayName="Test Files"
                    projectFiles="false"
                    kind="TEST_LOGICAL_FOLDER">
-      <logicalFolder name="f1"
-                     displayName="MyString Unit Test"
-                     projectFiles="true"
-                     kind="TEST">
-        <itemPath>tests/mystringtest_class.cpp</itemPath>
-        <itemPath>tests/mystringtest_class.h</itemPath>
-        <itemPath>tests/mystringtest_runner.cpp</itemPath>
-      </logicalFolder>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

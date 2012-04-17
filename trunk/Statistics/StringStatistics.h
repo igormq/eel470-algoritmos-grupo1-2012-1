@@ -12,17 +12,15 @@
 #include <set>
 #include "StringCounter.h"
 
-class Statistics {
-public:
-    Statistics();
-    Statistics(const Statistics& orig);
-    virtual ~Statistics();
-    bool addOccurrence(std::string);
-    bool resetStatistics();
-    bool addText(std::string);
-    std::set<StringCounter> getData();
-private:
+class StringStatistics {
     std::set<StringCounter> data;
+public:
+    StringStatistics();
+    StringStatistics(const StringStatistics& orig);
+    virtual ~StringStatistics();
+    bool add(std::string);
+    bool resetStatistics();
+    std::set<StringCounter> getData() const;
 };
 
 #endif	/* STATISTICS_H */
