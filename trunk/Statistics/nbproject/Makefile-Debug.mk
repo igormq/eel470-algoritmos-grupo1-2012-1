@@ -34,6 +34,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/FileProcessor.o \
 	${OBJECTDIR}/StringCounter.o \
 	${OBJECTDIR}/main.o \
 	${OBJECTDIR}/StringStatistics.o \
@@ -63,6 +64,11 @@ LDLIBSOPTIONS=
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/statistics: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} `wx-config --libs` -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/statistics  ${OBJECTFILES} ${LDLIBSOPTIONS} 
+
+${OBJECTDIR}/FileProcessor.o: FileProcessor.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/FileProcessor.o FileProcessor.cpp
 
 ${OBJECTDIR}/StringCounter.o: StringCounter.cpp 
 	${MKDIR} -p ${OBJECTDIR}
