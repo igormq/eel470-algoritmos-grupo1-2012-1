@@ -4,6 +4,7 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>FileProcessor.h</itemPath>
       <itemPath>StringContainer.h</itemPath>
       <itemPath>StringCounter.h</itemPath>
       <itemPath>StringStatistics.h</itemPath>
@@ -11,6 +12,7 @@
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
                    projectFiles="true">
+      <itemPath>FileProcessor.cpp</itemPath>
       <itemPath>StringContainer.cpp</itemPath>
       <itemPath>StringCounter.cpp</itemPath>
       <itemPath>StringStatistics.cpp</itemPath>
