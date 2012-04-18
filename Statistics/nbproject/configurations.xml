@@ -5,6 +5,8 @@
                    displayName="Header Files"
                    projectFiles="true">
       <itemPath>FileProcessor.h</itemPath>
+      <itemPath>MainApp.h</itemPath>
+      <itemPath>MainFrame.h</itemPath>
       <itemPath>StringContainer.h</itemPath>
       <itemPath>StringCounter.h</itemPath>
       <itemPath>StringStatistics.h</itemPath>
@@ -13,6 +15,8 @@
                    displayName="Resource Files"
                    projectFiles="true">
       <itemPath>FileProcessor.cpp</itemPath>
+      <itemPath>MainApp.cpp</itemPath>
+      <itemPath>MainFrame.cpp</itemPath>
       <itemPath>StringContainer.cpp</itemPath>
       <itemPath>StringCounter.cpp</itemPath>
       <itemPath>StringStatistics.cpp</itemPath>
@@ -42,14 +46,6 @@
         <compilerSet>default</compilerSet>
       </toolsSet>
       <compileType>
-        <ccTool>
-          <commandLine>`wx-config --cxxflags`</commandLine>
-        </ccTool>
-        <linkerTool>
-          <commandLine>`wx-config --libs`</commandLine>
-        </linkerTool>
-      </compileType>
-      <folder path="TestFiles/f1">
         <cTool>
           <incDir>
             <pElem>.</pElem>
@@ -57,18 +53,35 @@
           </incDir>
         </cTool>
         <ccTool>
+          <commandlineTool>g++</commandlineTool>
           <incDir>
-            <pElem>.</pElem>
-            <pElem>.</pElem>
+            <pElem>/usr/lib/wx/include/gtk2-unicode-release-2.8</pElem>
           </incDir>
+          <commandLine>`wx-config --cxxflags`</commandLine>
+          <preprocessorList>
+            <Elem>__WXGTK__</Elem>
+          </preprocessorList>
         </ccTool>
         <linkerTool>
-          <output>${TESTDIR}/TestFiles/f1</output>
+          <linkerAddLib>
+            <pElem>/usr/lib/i386-linux-gnu</pElem>
+          </linkerAddLib>
           <linkerLibItems>
             <linkerLibStdlibItem>CppUnit</linkerLibStdlibItem>
+            <linkerLibLibItem>wx_gtk2u_richtext-2.8</linkerLibLibItem>
+            <linkerLibLibItem>wx_gtk2u_aui-2.8</linkerLibLibItem>
+            <linkerLibLibItem>wx_gtk2u_xrc-2.8</linkerLibLibItem>
+            <linkerLibLibItem>wx_gtk2u_qa-2.8</linkerLibLibItem>
+            <linkerLibLibItem>wx_gtk2u_html-2.8</linkerLibLibItem>
+            <linkerLibLibItem>wx_gtk2u_adv-2.8</linkerLibLibItem>
+            <linkerLibLibItem>wx_gtk2u_core-2.8</linkerLibLibItem>
+            <linkerLibLibItem>wx_baseu_xml-2.8</linkerLibLibItem>
+            <linkerLibLibItem>wx_baseu_net-2.8</linkerLibLibItem>
+            <linkerLibLibItem>wx_baseu-2.8</linkerLibLibItem>
           </linkerLibItems>
+          <commandLine>`wx-config --libs`</commandLine>
         </linkerTool>
-      </folder>
+      </compileType>
     </conf>
     <conf name="Release" type="1">
       <toolsSet>

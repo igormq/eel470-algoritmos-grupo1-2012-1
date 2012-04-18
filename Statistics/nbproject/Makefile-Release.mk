@@ -37,6 +37,8 @@ OBJECTFILES= \
 	${OBJECTDIR}/FileProcessor.o \
 	${OBJECTDIR}/StringCounter.o \
 	${OBJECTDIR}/main.o \
+	${OBJECTDIR}/MainApp.o \
+	${OBJECTDIR}/MainFrame.o \
 	${OBJECTDIR}/StringStatistics.o \
 	${OBJECTDIR}/StringContainer.o
 
@@ -79,6 +81,16 @@ ${OBJECTDIR}/main.o: main.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
 	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/main.o main.cpp
+
+${OBJECTDIR}/MainApp.o: MainApp.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/MainApp.o MainApp.cpp
+
+${OBJECTDIR}/MainFrame.o: MainFrame.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/MainFrame.o MainFrame.cpp
 
 ${OBJECTDIR}/StringStatistics.o: StringStatistics.cpp 
 	${MKDIR} -p ${OBJECTDIR}
