@@ -37,6 +37,8 @@ OBJECTFILES= \
 	${OBJECTDIR}/FileProcessor.o \
 	${OBJECTDIR}/StringCounter.o \
 	${OBJECTDIR}/main.o \
+	${OBJECTDIR}/MainApp.o \
+	${OBJECTDIR}/MainFrame.o \
 	${OBJECTDIR}/StringStatistics.o \
 	${OBJECTDIR}/StringContainer.o
 
@@ -55,7 +57,7 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=
+LDLIBSOPTIONS=-L/usr/lib/i386-linux-gnu -lcppunit -lwx_gtk2u_richtext-2.8 -lwx_gtk2u_aui-2.8 -lwx_gtk2u_xrc-2.8 -lwx_gtk2u_qa-2.8 -lwx_gtk2u_html-2.8 -lwx_gtk2u_adv-2.8 -lwx_gtk2u_core-2.8 -lwx_baseu_xml-2.8 -lwx_baseu_net-2.8 -lwx_baseu-2.8
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
@@ -68,27 +70,37 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/statistics: ${OBJECTFILES}
 ${OBJECTDIR}/FileProcessor.o: FileProcessor.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
-	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/FileProcessor.o FileProcessor.cpp
+	$(COMPILE.cc) -g -D__WXGTK__ -I/usr/lib/wx/include/gtk2-unicode-release-2.8 -MMD -MP -MF $@.d -o ${OBJECTDIR}/FileProcessor.o FileProcessor.cpp
 
 ${OBJECTDIR}/StringCounter.o: StringCounter.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
-	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/StringCounter.o StringCounter.cpp
+	$(COMPILE.cc) -g -D__WXGTK__ -I/usr/lib/wx/include/gtk2-unicode-release-2.8 -MMD -MP -MF $@.d -o ${OBJECTDIR}/StringCounter.o StringCounter.cpp
 
 ${OBJECTDIR}/main.o: main.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
-	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/main.o main.cpp
+	$(COMPILE.cc) -g -D__WXGTK__ -I/usr/lib/wx/include/gtk2-unicode-release-2.8 -MMD -MP -MF $@.d -o ${OBJECTDIR}/main.o main.cpp
+
+${OBJECTDIR}/MainApp.o: MainApp.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -g -D__WXGTK__ -I/usr/lib/wx/include/gtk2-unicode-release-2.8 -MMD -MP -MF $@.d -o ${OBJECTDIR}/MainApp.o MainApp.cpp
+
+${OBJECTDIR}/MainFrame.o: MainFrame.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -g -D__WXGTK__ -I/usr/lib/wx/include/gtk2-unicode-release-2.8 -MMD -MP -MF $@.d -o ${OBJECTDIR}/MainFrame.o MainFrame.cpp
 
 ${OBJECTDIR}/StringStatistics.o: StringStatistics.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
-	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/StringStatistics.o StringStatistics.cpp
+	$(COMPILE.cc) -g -D__WXGTK__ -I/usr/lib/wx/include/gtk2-unicode-release-2.8 -MMD -MP -MF $@.d -o ${OBJECTDIR}/StringStatistics.o StringStatistics.cpp
 
 ${OBJECTDIR}/StringContainer.o: StringContainer.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
-	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/StringContainer.o StringContainer.cpp
+	$(COMPILE.cc) -g -D__WXGTK__ -I/usr/lib/wx/include/gtk2-unicode-release-2.8 -MMD -MP -MF $@.d -o ${OBJECTDIR}/StringContainer.o StringContainer.cpp
 
 # Subprojects
 .build-subprojects:
