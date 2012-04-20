@@ -14,18 +14,18 @@
 #define DEFAULTVALID "abcdefghijklmnopqrstuvwxyz"\
                           "0123456789"
 #define DEFAULTACCENTS "áéíóúàèìòùãẽĩõũâêîôûäëïöü"\
-                "ÁÉÍÓÚÀÈÌÒÙÃẼĨÕŨÂÊÎÔÛÄËÏÖÜ"\
-                "çÇàèìòù"
+                       "ÁÉÍÓÚÀÈÌÒÙÃẼĨÕŨÂÊÎÔÛÄËÏÖÜ"\
+                       "çÇàèìòù"
 #define DEFAULTNOACCENTS "aeiouaeiouaeiouaeiouaeiou"\
-                "AEIOUAEIOUAEIOUAEIOUAEIOU"\
-                "ccaeiou"
+                         "aeiouaeiouaeiouaeiouaeiou"\
+                         "ccaeiou"
 
 #include <string>
 #include <deque>
 
 class StringContainer {
 public:
-    StringContainer(std::string, char*, char*, char*);
+    StringContainer(std::string, std::string, std::string, std::string);
     StringContainer(const StringContainer& orig);
     virtual ~StringContainer();
     StringContainer();
@@ -35,15 +35,15 @@ public:
     std::string getWord(int) const;
     int getWordCount() const;
 
-    void toSafe(std::string&);
+    void toSafe(std::string &);
     //Helpers
     bool charIsValid(char);
     std::string getFirstValidWord(std::string &);
     
 private:
-    char* m_ValidChars;
-    char* m_Accents;
-    char* m_NoAccents;
+    std::string m_ValidChars;
+    std::string m_Accents;
+    std::string m_NoAccents;
     int countValidChars, countAccents, countNoAccents;
     std::deque<std::string> m_Strings;
 };

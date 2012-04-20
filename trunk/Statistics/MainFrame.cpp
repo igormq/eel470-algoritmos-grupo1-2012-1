@@ -42,7 +42,7 @@ MainFrame::MainFrame(const wxString& title, const wxPoint& pos, const wxSize& si
     this->toolBar->AddSeparator();
     this->toolBar->AddTool(ID_About, aboutBitMap, _("About"), _("About Long String"));
     this->toolBar->AddSeparator();
-    this->toolBar->AddTool(ID_Quit, exitBitMap, _("Exit(Ctrl+F4)"), _("Exit Long String"));
+    this->toolBar->AddTool(ID_Quit, exitBitMap, _("Exit(ALT+F4)"), _("Exit Long String"));
     this->toolBar->Realize(); 
    
     SetToolBar(toolBar);
