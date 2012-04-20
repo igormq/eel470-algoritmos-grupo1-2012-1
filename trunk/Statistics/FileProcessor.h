@@ -10,17 +10,26 @@
 
 #include <string>
 #include <fstream>
+#include <deque>
+#include <map>
+
 #include "StringContainer.h"
 #include "StringCounter.h"
 #include "StringStatistics.h"
 
+using namespace std;
+
 class FileProcessor {
-    std::string path;
 public:
-    FileProcessor(std::string);
+    FileProcessor();
     FileProcessor(const FileProcessor& orig);
     virtual ~FileProcessor();
-    void addToStatistics(StringStatistics &);
+    void addFile(const string &);
+    map<string, int> getStatistics() const;
+private:
+    deque<string> fileQueue;
+    StringStatistics stringStatistics;
+    
 };
 
 #endif	/* FILEPROCESSOR_H */
