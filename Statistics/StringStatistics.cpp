@@ -28,17 +28,14 @@ void StringStatistics::add(std::string inStr){
     bool found = false;
     std::set<StringCounter>::iterator it;
     
-    for ( it=this->data.begin() ; it != this->data.end(); it++ ){
-        if(*it==inStr){
-            *it++;
-            found=true;
-        } 
-    }
+    StringCounter temp (inStr);
+    it=this->data.find(temp);
     
-    if(!found){
-        StringCounter temp (inStr);
-        this->data.insert(temp);        
+    if(it != this->data.end()){
+        temp+=(*it);
+        this->data.erase(it);
     }
+    this->data.insert(temp);
     
        
 }

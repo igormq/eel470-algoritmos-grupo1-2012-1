@@ -19,7 +19,7 @@ public:
     virtual ~StringCounter();
     int getCount() const;
     std::string getKey() const;
-    StringCounter operator++();
+    StringCounter operator+=(StringCounter);
     bool operator<(StringCounter) const;
     bool operator==(StringCounter) const;
 };
