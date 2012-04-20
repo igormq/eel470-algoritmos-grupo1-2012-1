@@ -34,17 +34,25 @@
                      displayName="TestStringContainer"
                      projectFiles="true"
                      kind="TEST">
-        <itemPath>/home/igormq/NetBeansProjects/Statistics/tests/TestRunner.cpp</itemPath>
-        <itemPath>/home/igormq/NetBeansProjects/Statistics/tests/TestStringContainer.cpp</itemPath>
-        <itemPath>/home/igormq/NetBeansProjects/Statistics/tests/TestStringContainer.h</itemPath>
+        <itemPath>tests/TestRunner.cpp</itemPath>
+        <itemPath>tests/TestStringContainer.cpp</itemPath>
+        <itemPath>tests/TestStringContainer.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f2"
                      displayName="TestStringStatistics"
                      projectFiles="true"
                      kind="TEST">
-        <itemPath>/home/igormq/NetBeansProjects/Statistics/tests/TestRunnerStringStatistics.cpp</itemPath>
-        <itemPath>/home/igormq/NetBeansProjects/Statistics/tests/testStringStatisticsClass.cpp</itemPath>
-        <itemPath>/home/igormq/NetBeansProjects/Statistics/tests/testStringStatisticsClass.h</itemPath>
+        <itemPath>tests/TestRunnerStringStatistics.cpp</itemPath>
+        <itemPath>tests/testStringStatisticsClass.cpp</itemPath>
+        <itemPath>tests/testStringStatisticsClass.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f2"
+                     displayName="TestStringStatistics"
+                     projectFiles="true"
+                     kind="TEST">
+        <itemPath>tests/TestRunnerStringStatistics.cpp</itemPath>
+        <itemPath>tests/testStringStatisticsClass.cpp</itemPath>
+        <itemPath>tests/testStringStatisticsClass.h</itemPath>
       </logicalFolder>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
@@ -72,15 +80,22 @@
           <commandlineTool>g++</commandlineTool>
           <incDir>
             <pElem>/usr/lib/wx/include/gtk2-unicode-release-2.8</pElem>
+            <pElem>/usr/local/include/wx-2.8</pElem>
+            <pElem>/usr/local/lib/wx/include/gtk2-ansi-release-2.8</pElem>
           </incDir>
           <commandLine>`wx-config --cxxflags`</commandLine>
           <preprocessorList>
+            <Elem>NDEBUG</Elem>
+            <Elem>WXNO_RTTI</Elem>
+            <Elem>_UNICODE</Elem>
             <Elem>__WXGTK__</Elem>
           </preprocessorList>
         </ccTool>
         <linkerTool>
           <linkerAddLib>
+            <pElem>/usr/lib</pElem>
             <pElem>/usr/lib/i386-linux-gnu</pElem>
+            <pElem>/usr/local/lib</pElem>
           </linkerAddLib>
           <linkerLibItems>
             <linkerLibStdlibItem>CppUnit</linkerLibStdlibItem>
