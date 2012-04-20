@@ -52,7 +52,7 @@ StringContainer::~StringContainer() {
 //Data retrieve
 
 std::string StringContainer::getWord(int pos) const {
-    return this->m_Strings[0];
+    return this->m_Strings[pos];
 }
 
 int StringContainer::getWordCount() const {
