@@ -9,6 +9,8 @@
 #define	MAINFRAME_H
 
 #include "wx/wx.h"
+#include "StringStatistics.h"
+#include "FileProcessor.h"
 
 
 class MainFrame: public wxFrame
@@ -34,6 +36,8 @@ public:
      wxMenuBar *menuBar;
      wxTextCtrl *textCtrl;
      wxToolBar *toolBar;
+     StringStatistics *ss;
+     FileProcessor *fp;
      
     
     DECLARE_EVENT_TABLE()

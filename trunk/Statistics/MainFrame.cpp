@@ -5,13 +5,22 @@
  * Created on April 17, 2012, 3:56 PM
  */
 
+#include <wx-2.8/wx/string.h>
+
 #include "MainFrame.h"
 #include "wx/wx.h"
 #include "wx/toolbar.h"
+#include <sstream>
+#include <wx-2.8/wx/textctrl.h>
+#include <wx-2.8/wx/gtk/textctrl.h>
 
 MainFrame::MainFrame(const wxString& title, const wxPoint& pos, const wxSize& size)
 : wxFrame( NULL, -1, title, pos, size )
 {
+    
+    this->ss = new StringStatistics();
+    this->fp = new FileProcessor(*ss);
+    
     this->menuFile = new wxMenu();
 
     this->menuFile->Append( ID_Open, _("&Open\tCtrl-O"));
@@ -72,12 +81,18 @@ void MainFrame::OnOpen(wxCommandEvent& WXUNUSED(event))
     if(openFileDialog->ShowModal() == wxID_OK)
     {
         wxString fileName = openFileDialog->GetPath();
+        this->fp->include(fileName);
+        
+        this->textCtrl->Clear();
+        std::ostream stream(this->textCtrl);
+        stream << *(this->ss);
     }
 }
 
 void MainFrame::OnClear(wxCommandEvent& WXUNUSED(event))
 {
-   
+    this->ss->resetStatistics();
+    this->textCtrl->Clear();
 }
 
 

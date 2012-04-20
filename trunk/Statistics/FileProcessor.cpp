@@ -33,13 +33,14 @@ bool FileProcessor::include(wxString path) {
     std::string currLine;
 
     while (true) {
-        file >> currLine;
+        getline(file, currLine);
         if (file.eof() && currLine == "" )
             break;
         
         StringContainer sc(currLine);
-        for (int i = 0; i < sc.getWordCount(); i++)
+        for (int i = 0; i < sc.getWordCount(); i++){
             this->m_ss->add(sc.getWord(i));
+        }
     }
     return true;
 }

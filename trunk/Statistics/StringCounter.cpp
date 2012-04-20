@@ -28,8 +28,8 @@ std::string StringCounter::getKey() const {
     return this->key;
 }
 
-StringCounter StringCounter::operator ++() {
-    this->count++;
+StringCounter StringCounter::operator +=(StringCounter sc) {
+    this->count += sc.getCount();
     return *this;
 }
 
