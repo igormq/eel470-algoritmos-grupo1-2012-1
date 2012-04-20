@@ -9,29 +9,27 @@
 #include <algorithm>
 #include <exception>
 #include <string.h>
-
+#include <iostream>
 //Constructors and destructors;
 
 StringContainer::StringContainer(std::string inStr = "\0",
-                                 char * inValidChars = DEFAULTVALID,
-                                 char* accents = DEFAULTACCENTS, 
-                                 char*noAccents = DEFAULTNOACCENTS) 
+                                 std::string inValidChars = DEFAULTVALID,
+                                 std::string accents = DEFAULTACCENTS, 
+                                 std::string noAccents = DEFAULTNOACCENTS) 
 {
     try {
     /* Initialize variables*/
     this->m_ValidChars = inValidChars;
     this->m_Accents = accents;
     this->m_NoAccents = noAccents;
-    this->countValidChars = strlen(this->m_ValidChars);
-    this->countNoAccents = strlen(this->m_NoAccents);
-    this->countAccents = strlen(this->m_NoAccents);
+    this->countValidChars = this->m_ValidChars.length();
+    this->countNoAccents = this->m_NoAccents.length();
+    this->countAccents = this->m_Accents.length();
     /*End of initialization*/
     }
     catch (char *str) {
         throw str;
     }
-    if (this->countAccents != this->countNoAccents)
-        throw "Mapping Failed";
     
     this->toSafe(inStr);
     
@@ -83,19 +81,20 @@ bool StringContainer::charIsValid(char inChar) {
  * 
  * @param str
  */
-void StringContainer::toSafe(std::string& str) {
-     for(unsigned i=0; i< str.length(); i++)
-     {
-         for(unsigned j=0; j < this->countAccents; j++)
-         {
-             if(str[i] == this->m_Accents[j])
-             {
-                 str[i] = this->m_NoAccents[j]; 
-                //Prevents unnecessary loops
+void StringContainer::toSafe(std::string & str) {
+    unsigned int i, j;
+    for(i = 0 ; i < str.length(); i++)
+    {
+        std::cout << i << std::endl;
+        for(j = 0; j < this->countAccents; j++)
+        {
+            if(str[i] == this->m_Accents[j])
+            {
+                std::cout << '#'<<j<<'#' << std::endl;
                 j = this->countAccents;
-             }
-         }
-     }
+            }
+        }
+    }
     //To Lower Entire String
     std::transform(str.begin(), str.end(), str.begin(), ::tolower);
 }
