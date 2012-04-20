@@ -12,10 +12,10 @@
 #include <iostream>
 //Constructors and destructors;
 
-StringContainer::StringContainer(std::string inStr = "\0",
-                                 std::string inValidChars = DEFAULTVALID,
-                                 std::string accents = DEFAULTACCENTS, 
-                                 std::string noAccents = DEFAULTNOACCENTS) 
+StringContainer::StringContainer(std::string inStr,
+                                 std::string inValidChars,
+                                 std::string accents, 
+                                 std::string noAccents) 
 {
     try {
     /* Initialize variables*/
@@ -30,8 +30,8 @@ StringContainer::StringContainer(std::string inStr = "\0",
     catch (char *str) {
         throw str;
     }
-    
-    this->toSafe(inStr);
+    if(!inStr.empty())
+        this->toSafe(inStr);
     
     while(!inStr.empty()) {
         std::string first = this->getFirstValidWord(inStr);
@@ -46,10 +46,6 @@ StringContainer::StringContainer(const StringContainer& orig) {
 }
 
 StringContainer::~StringContainer() {
-}
-
-StringContainer::StringContainer(std::string inStr) {
-    StringContainer(inStr, DEFAULTVALID, DEFAULTACCENTS, DEFAULTNOACCENTS);
 }
 
 
@@ -72,8 +68,8 @@ int StringContainer::getWordCount() const {
  * @return true if char is valid, otherwise return false
  */
 bool StringContainer::charIsValid(char inChar) {
-    for(unsigned i=0; i < this->countValidChars; i++)
-        if(inChar = this->m_ValidChars[i]) return true;
+    for(int i=0; i < this->countValidChars; i++)
+        if(inChar == this->m_ValidChars[i]) return true;
     return false;
 }
 
@@ -82,15 +78,15 @@ bool StringContainer::charIsValid(char inChar) {
  * @param str
  */
 void StringContainer::toSafe(std::string & str) {
-    unsigned int i, j;
+    int i, j;
     for(i = 0 ; i < str.length(); i++)
     {
-        std::cout << i << std::endl;
         for(j = 0; j < this->countAccents; j++)
         {
+            char k = str[i];
             if(str[i] == this->m_Accents[j])
             {
-                std::cout << '#'<<j<<'#' << std::endl;
+                str[i] == this->m_NoAccents[j];
                 j = this->countAccents;
             }
         }

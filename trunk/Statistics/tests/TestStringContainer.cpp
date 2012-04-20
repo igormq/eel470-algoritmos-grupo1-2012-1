@@ -23,21 +23,37 @@ void TestStringContainer::tearDown() {
 
 void TestStringContainer::testToSafe()
 {
-    StringContainer sc = StringContainer("a");
+    StringContainer sc;
+    
     std::string str = "Teste!@3a";
     sc.toSafe(str);
-    CPPUNIT_ASSERT( (str == "teste3a"));
+    CPPUNIT_ASSERT(str == "teste!@3a");
+    
+    str = "alá";
+    sc.toSafe(str);
+    CPPUNIT_ASSERT(str == "alá");
+    
 }
 void TestStringContainer::testCharIsValid(){
-    CPPUNIT_ASSERT(false);
+    StringContainer sc;
+    CPPUNIT_ASSERT(sc.charIsValid('a'));
+    CPPUNIT_ASSERT(sc.charIsValid('b'));
+    CPPUNIT_ASSERT(!sc.charIsValid('!'));
 }
 void TestStringContainer::testGetFirstValidWord(){
-    CPPUNIT_ASSERT(false);
+    StringContainer sc;
+    std::string str = "!feliz amem!@# !)@#@)!#!) %()!@ lol !(#";
+    CPPUNIT_ASSERT(sc.getFirstValidWord(str) == "feliz");
+    CPPUNIT_ASSERT(sc.getFirstValidWord(str) == "amem");
+    CPPUNIT_ASSERT(sc.getFirstValidWord(str) == "lol");
 }
 void TestStringContainer::testGetWord(){
-    CPPUNIT_ASSERT(false);
+    StringContainer sc("Vida Felix");
+    CPPUNIT_ASSERT(sc.getWord(0) == "vida");
+    CPPUNIT_ASSERT(sc.getWord(1) == "felix");
 }
 void TestStringContainer::testGetWordCount(){
-    CPPUNIT_ASSERT(false);
+    StringContainer sc("Vida Felix");
+    CPPUNIT_ASSERT(sc.getWordCount() == 2);
 }
 
