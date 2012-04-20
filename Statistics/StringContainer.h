@@ -25,11 +25,12 @@
 
 class StringContainer {
 public:
-    StringContainer(std::string, std::string, std::string, std::string);
+    StringContainer(std::string inStr = "",
+                                 std::string inValidChars = DEFAULTVALID,
+                                 std::string accents = DEFAULTACCENTS, 
+                                 std::string noAccents = DEFAULTNOACCENTS) ;
     StringContainer(const StringContainer& orig);
     virtual ~StringContainer();
-    StringContainer();
-    StringContainer(std::string);
 
     //Data retrieve
     std::string getWord(int) const;
