@@ -22,7 +22,7 @@ public:
     void add(std::string);
     bool resetStatistics();
     std::set<StringCounter> getData() const;
-    std::stringstream echo() const;
+    friend std::ostream& operator <<(std::ostream &os,const StringStatistics &obj);
 };
 
 #endif	/* STATISTICS_H */

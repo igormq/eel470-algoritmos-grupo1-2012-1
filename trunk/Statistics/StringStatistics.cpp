@@ -57,11 +57,11 @@ std::set<StringCounter> StringStatistics::getData() const{
     return this->data;
 }
 
-std::stringstream StringStatistics::echo() const {
-    std::stringstream buffer;
+std::ostream& operator<< (std::ostream &os,const StringStatistics &obj) {
+    std::set<StringCounter> data = obj.getData();
     std::set<StringCounter>::iterator it;
-    for ( it=this->data.begin() ; it != this->data.end(); it++ ){
-        buffer << it->getKey() << ": " << it->getCount() << std::endl;
+    for ( it=data.begin() ; it != data.end(); it++ ){
+        os << it->getKey() << ": " << it->getCount() << std::endl;
     }
-    return buffer;
+    return os;
 }
