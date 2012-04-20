@@ -12,6 +12,7 @@
 #include <fstream>
 #include "StringContainer.h"
 #include "StringStatistics.h"
+#include "wx/wx.h"
 
 class FileProcessor {
     StringStatistics * m_ss;
@@ -19,7 +20,7 @@ public:
     FileProcessor(StringStatistics & ss);
     FileProcessor(const FileProcessor& orig);
     virtual ~FileProcessor();
-    bool include(std::string path);
+    bool include(wxString path);
 };
 
 #endif	/* FILEPROCESSOR_H */
