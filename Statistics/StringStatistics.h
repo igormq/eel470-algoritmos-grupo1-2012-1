@@ -18,10 +18,9 @@ public:
     StringStatistics();
     StringStatistics(const StringStatistics& orig);
     virtual ~StringStatistics();
-    bool add(std::string);
+    void add(std::string);
     bool resetStatistics();
     std::set<StringCounter> getData() const;
 };
 
 #endif	/* STATISTICS_H */
-
