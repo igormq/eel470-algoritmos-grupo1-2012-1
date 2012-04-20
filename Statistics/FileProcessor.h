@@ -14,7 +14,7 @@
 #include "StringStatistics.h"
 
 class FileProcessor {
-    StringStatistics & m_ss;
+    StringStatistics * m_ss;
 public:
     FileProcessor(StringStatistics & ss);
     FileProcessor(const FileProcessor& orig);
