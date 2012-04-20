@@ -33,9 +33,9 @@ bool FileProcessor::include(wxString path) {
     std::string currLine;
 
     while (true) {
-        getline(file, currLine);
-        if (file.eof() && currLine == "" )
+        if (file.eof())
             break;
+        getline(file, currLine);
         
         StringContainer sc(currLine);
         for (int i = 0; i < sc.getWordCount(); i++){
