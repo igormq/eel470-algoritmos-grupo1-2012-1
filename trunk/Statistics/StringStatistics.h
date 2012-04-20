@@ -10,6 +10,7 @@
 
 #include <string>
 #include <set>
+#include <sstream>
 #include "StringCounter.h"
 
 class StringStatistics {
@@ -21,6 +22,7 @@ public:
     void add(std::string);
     bool resetStatistics();
     std::set<StringCounter> getData() const;
+    std::stringstream echo() const;
 };
 
 #endif	/* STATISTICS_H */

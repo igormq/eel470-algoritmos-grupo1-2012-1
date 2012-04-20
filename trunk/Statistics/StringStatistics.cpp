@@ -56,3 +56,12 @@ bool StringStatistics::resetStatistics(){
 std::set<StringCounter> StringStatistics::getData() const{
     return this->data;
 }
+
+std::stringstream StringStatistics::echo() const {
+    std::stringstream buffer;
+    std::set<StringCounter>::iterator it;
+    for ( it=this->data.begin() ; it != this->data.end(); it++ ){
+        buffer << it->getKey() << ": " << it->getCount() << std::endl;
+    }
+    return buffer;
+}
