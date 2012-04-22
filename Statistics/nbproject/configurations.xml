@@ -10,6 +10,7 @@
       <itemPath>StringContainer.h</itemPath>
       <itemPath>StringCounter.h</itemPath>
       <itemPath>StringStatistics.h</itemPath>
+      <itemPath>/home/igormq/NetBeansProjects/Statistics/wxTranslationHelper.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -20,6 +21,7 @@
       <itemPath>StringContainer.cpp</itemPath>
       <itemPath>StringCounter.cpp</itemPath>
       <itemPath>StringStatistics.cpp</itemPath>
+      <itemPath>/home/igormq/NetBeansProjects/Statistics/wxTranslationHelper.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
@@ -50,9 +52,6 @@
                      displayName="TestStringStatistics"
                      projectFiles="true"
                      kind="TEST">
-        <itemPath>tests/TestRunnerStringStatistics.cpp</itemPath>
-        <itemPath>tests/testStringStatisticsClass.cpp</itemPath>
-        <itemPath>tests/testStringStatisticsClass.h</itemPath>
       </logicalFolder>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
@@ -62,6 +61,9 @@
       <itemPath>Makefile</itemPath>
     </logicalFolder>
   </logicalFolder>
+  <sourceRootList>
+    <Elem>/home/igormq/NetBeansProjects/Statistics</Elem>
+  </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="Debug" type="1">
@@ -87,7 +89,6 @@
           <preprocessorList>
             <Elem>NDEBUG</Elem>
             <Elem>WXNO_RTTI</Elem>
-            <Elem>_UNICODE</Elem>
             <Elem>__WXGTK__</Elem>
           </preprocessorList>
         </ccTool>

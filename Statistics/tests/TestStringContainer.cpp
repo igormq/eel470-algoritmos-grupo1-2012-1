@@ -25,13 +25,21 @@ void TestStringContainer::testToSafe()
 {
     StringContainer sc;
     
-    std::string str = "Teste!@3a";
+    std::string str = "Teste!@3aÇçàÁ";
     sc.toSafe(str);
-    CPPUNIT_ASSERT(str == "teste!@3a");
+    CPPUNIT_ASSERT(str == "teste!@3accaa");
     
-    str = "alÃ¡";
+    str = "alá";
     sc.toSafe(str);
-    CPPUNIT_ASSERT(str == "alÃ¡");
+    CPPUNIT_ASSERT(str == "ala");
+    
+    str = "álá";
+    sc.toSafe(str);
+    CPPUNIT_ASSERT(str == "ala");
+    
+    str = "áéíóúàèìòùâêîôûäëïöüã?õÁÉÍÓÚÀÈÌÒÙÂÊÎÔÛÄËÏÖÜÃ?ÕÇç";
+    sc.toSafe(str);
+    CPPUNIT_ASSERT(str == "aeiouaeiouaeiouaeiouaeoaeiouaeiouaeiouaeiouaeocc");
     
 }
 void TestStringContainer::testCharIsValid(){

@@ -14,6 +14,7 @@
 BEGIN_EVENT_TABLE(MainFrame, wxFrame)
     EVT_MENU(ID_Quit, MainFrame::OnQuit)
     EVT_MENU(ID_About, MainFrame::OnAbout)
+    EVT_MENU(ID_Select_Language, MainFrame::OnSelectLanguage)
     EVT_MENU(ID_Open, MainFrame::OnOpen)
     EVT_MENU(ID_Clear, MainFrame::OnClear)
 END_EVENT_TABLE()

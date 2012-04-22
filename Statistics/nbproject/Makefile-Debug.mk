@@ -36,6 +36,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 OBJECTFILES= \
 	${OBJECTDIR}/FileProcessor.o \
 	${OBJECTDIR}/StringCounter.o \
+	${OBJECTDIR}/_ext/758266167/wxTranslationHelper.o \
 	${OBJECTDIR}/main.o \
 	${OBJECTDIR}/MainApp.o \
 	${OBJECTDIR}/MainFrame.o \
@@ -48,6 +49,7 @@ TESTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}/tests
 # Test Files
 TESTFILES= \
 	${TESTDIR}/TestFiles/f1 \
+	${TESTDIR}/TestFiles/f2 \
 	${TESTDIR}/TestFiles/f2
 
 # C Compiler Flags
@@ -64,7 +66,7 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=-L/usr/lib/i386-linux-gnu -lcppunit -lwx_gtk2u_richtext-2.8 -lwx_gtk2u_aui-2.8 -lwx_gtk2u_xrc-2.8 -lwx_gtk2u_qa-2.8 -lwx_gtk2u_html-2.8 -lwx_gtk2u_adv-2.8 -lwx_gtk2u_core-2.8 -lwx_baseu_xml-2.8 -lwx_baseu_net-2.8 -lwx_baseu-2.8
+LDLIBSOPTIONS=-L/usr/lib -L/usr/lib/i386-linux-gnu -L/usr/local/lib -lcppunit -lwx_gtk2u_richtext-2.8 -lwx_gtk2u_aui-2.8 -lwx_gtk2u_xrc-2.8 -lwx_gtk2u_qa-2.8 -lwx_gtk2u_html-2.8 -lwx_gtk2u_adv-2.8 -lwx_gtk2u_core-2.8 -lwx_baseu_xml-2.8 -lwx_baseu_net-2.8 -lwx_baseu-2.8
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
@@ -77,74 +79,83 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/statistics: ${OBJECTFILES}
 ${OBJECTDIR}/FileProcessor.o: FileProcessor.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
-	$(COMPILE.cc) -g -D__WXGTK__ -I/usr/lib/wx/include/gtk2-unicode-release-2.8 -MMD -MP -MF $@.d -o ${OBJECTDIR}/FileProcessor.o FileProcessor.cpp
+	$(COMPILE.cc) -g -DNDEBUG -DWXNO_RTTI -D__WXGTK__ -I/usr/lib/wx/include/gtk2-unicode-release-2.8 -I/usr/local/include/wx-2.8 -I/usr/local/lib/wx/include/gtk2-ansi-release-2.8 -MMD -MP -MF $@.d -o ${OBJECTDIR}/FileProcessor.o FileProcessor.cpp
 
 ${OBJECTDIR}/StringCounter.o: StringCounter.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
-	$(COMPILE.cc) -g -D__WXGTK__ -I/usr/lib/wx/include/gtk2-unicode-release-2.8 -MMD -MP -MF $@.d -o ${OBJECTDIR}/StringCounter.o StringCounter.cpp
+	$(COMPILE.cc) -g -DNDEBUG -DWXNO_RTTI -D__WXGTK__ -I/usr/lib/wx/include/gtk2-unicode-release-2.8 -I/usr/local/include/wx-2.8 -I/usr/local/lib/wx/include/gtk2-ansi-release-2.8 -MMD -MP -MF $@.d -o ${OBJECTDIR}/StringCounter.o StringCounter.cpp
+
+${OBJECTDIR}/_ext/758266167/wxTranslationHelper.o: /home/igormq/NetBeansProjects/Statistics/wxTranslationHelper.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/758266167
+	${RM} $@.d
+	$(COMPILE.cc) -g -DNDEBUG -DWXNO_RTTI -D__WXGTK__ -I/usr/lib/wx/include/gtk2-unicode-release-2.8 -I/usr/local/include/wx-2.8 -I/usr/local/lib/wx/include/gtk2-ansi-release-2.8 -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/758266167/wxTranslationHelper.o /home/igormq/NetBeansProjects/Statistics/wxTranslationHelper.cpp
 
 ${OBJECTDIR}/main.o: main.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
-	$(COMPILE.cc) -g -D__WXGTK__ -I/usr/lib/wx/include/gtk2-unicode-release-2.8 -MMD -MP -MF $@.d -o ${OBJECTDIR}/main.o main.cpp
+	$(COMPILE.cc) -g -DNDEBUG -DWXNO_RTTI -D__WXGTK__ -I/usr/lib/wx/include/gtk2-unicode-release-2.8 -I/usr/local/include/wx-2.8 -I/usr/local/lib/wx/include/gtk2-ansi-release-2.8 -MMD -MP -MF $@.d -o ${OBJECTDIR}/main.o main.cpp
 
 ${OBJECTDIR}/MainApp.o: MainApp.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
-	$(COMPILE.cc) -g -D__WXGTK__ -I/usr/lib/wx/include/gtk2-unicode-release-2.8 -MMD -MP -MF $@.d -o ${OBJECTDIR}/MainApp.o MainApp.cpp
+	$(COMPILE.cc) -g -DNDEBUG -DWXNO_RTTI -D__WXGTK__ -I/usr/lib/wx/include/gtk2-unicode-release-2.8 -I/usr/local/include/wx-2.8 -I/usr/local/lib/wx/include/gtk2-ansi-release-2.8 -MMD -MP -MF $@.d -o ${OBJECTDIR}/MainApp.o MainApp.cpp
 
 ${OBJECTDIR}/MainFrame.o: MainFrame.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
-	$(COMPILE.cc) -g -D__WXGTK__ -I/usr/lib/wx/include/gtk2-unicode-release-2.8 -MMD -MP -MF $@.d -o ${OBJECTDIR}/MainFrame.o MainFrame.cpp
+	$(COMPILE.cc) -g -DNDEBUG -DWXNO_RTTI -D__WXGTK__ -I/usr/lib/wx/include/gtk2-unicode-release-2.8 -I/usr/local/include/wx-2.8 -I/usr/local/lib/wx/include/gtk2-ansi-release-2.8 -MMD -MP -MF $@.d -o ${OBJECTDIR}/MainFrame.o MainFrame.cpp
 
 ${OBJECTDIR}/StringStatistics.o: StringStatistics.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
-	$(COMPILE.cc) -g -D__WXGTK__ -I/usr/lib/wx/include/gtk2-unicode-release-2.8 -MMD -MP -MF $@.d -o ${OBJECTDIR}/StringStatistics.o StringStatistics.cpp
+	$(COMPILE.cc) -g -DNDEBUG -DWXNO_RTTI -D__WXGTK__ -I/usr/lib/wx/include/gtk2-unicode-release-2.8 -I/usr/local/include/wx-2.8 -I/usr/local/lib/wx/include/gtk2-ansi-release-2.8 -MMD -MP -MF $@.d -o ${OBJECTDIR}/StringStatistics.o StringStatistics.cpp
 
 ${OBJECTDIR}/StringContainer.o: StringContainer.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
-	$(COMPILE.cc) -g -D__WXGTK__ -I/usr/lib/wx/include/gtk2-unicode-release-2.8 -MMD -MP -MF $@.d -o ${OBJECTDIR}/StringContainer.o StringContainer.cpp
+	$(COMPILE.cc) -g -DNDEBUG -DWXNO_RTTI -D__WXGTK__ -I/usr/lib/wx/include/gtk2-unicode-release-2.8 -I/usr/local/include/wx-2.8 -I/usr/local/lib/wx/include/gtk2-ansi-release-2.8 -MMD -MP -MF $@.d -o ${OBJECTDIR}/StringContainer.o StringContainer.cpp
 
 # Subprojects
 .build-subprojects:
 
 # Build Test Targets
 .build-tests-conf: .build-conf ${TESTFILES}
-${TESTDIR}/TestFiles/f1: ${TESTDIR}/_ext/1234444453/TestRunner.o ${TESTDIR}/_ext/1234444453/TestStringContainer.o ${OBJECTFILES:%.o=%_nomain.o}
+${TESTDIR}/TestFiles/f1: ${TESTDIR}/tests/TestRunner.o ${TESTDIR}/tests/TestStringContainer.o ${OBJECTFILES:%.o=%_nomain.o}
 	${MKDIR} -p ${TESTDIR}/TestFiles
 	${LINK.cc}   -o ${TESTDIR}/TestFiles/f1 $^ ${LDLIBSOPTIONS} -lcppunit 
 
-${TESTDIR}/TestFiles/f2: ${TESTDIR}/_ext/1234444453/TestRunnerStringStatistics.o ${TESTDIR}/_ext/1234444453/testStringStatisticsClass.o ${OBJECTFILES:%.o=%_nomain.o}
+${TESTDIR}/TestFiles/f2: ${TESTDIR}/tests/TestRunnerStringStatistics.o ${TESTDIR}/tests/testStringStatisticsClass.o ${OBJECTFILES:%.o=%_nomain.o}
+	${MKDIR} -p ${TESTDIR}/TestFiles
+	${LINK.cc}   -o ${TESTDIR}/TestFiles/f2 $^ ${LDLIBSOPTIONS} -lcppunit 
+
+${TESTDIR}/TestFiles/f2: ${OBJECTFILES:%.o=%_nomain.o}
 	${MKDIR} -p ${TESTDIR}/TestFiles
 	${LINK.cc}   -o ${TESTDIR}/TestFiles/f2 $^ ${LDLIBSOPTIONS} -lcppunit 
 
 
-${TESTDIR}/_ext/1234444453/TestRunner.o: /home/igormq/NetBeansProjects/Statistics/tests/TestRunner.cpp 
-	${MKDIR} -p ${TESTDIR}/_ext/1234444453
+${TESTDIR}/tests/TestRunner.o: tests/TestRunner.cpp 
+	${MKDIR} -p ${TESTDIR}/tests
 	${RM} $@.d
-	$(COMPILE.cc) -g -D__WXGTK__ -I. -I/usr/lib/wx/include/gtk2-unicode-release-2.8 -MMD -MP -MF $@.d -o ${TESTDIR}/_ext/1234444453/TestRunner.o /home/igormq/NetBeansProjects/Statistics/tests/TestRunner.cpp
+	$(COMPILE.cc) -g -DNDEBUG -DWXNO_RTTI -D__WXGTK__ -I. -I/usr/lib/wx/include/gtk2-unicode-release-2.8 -I/usr/local/include/wx-2.8 -I/usr/local/lib/wx/include/gtk2-ansi-release-2.8 -MMD -MP -MF $@.d -o ${TESTDIR}/tests/TestRunner.o tests/TestRunner.cpp
 
 
-${TESTDIR}/_ext/1234444453/TestStringContainer.o: /home/igormq/NetBeansProjects/Statistics/tests/TestStringContainer.cpp 
-	${MKDIR} -p ${TESTDIR}/_ext/1234444453
+${TESTDIR}/tests/TestStringContainer.o: tests/TestStringContainer.cpp 
+	${MKDIR} -p ${TESTDIR}/tests
 	${RM} $@.d
-	$(COMPILE.cc) -g -D__WXGTK__ -I. -I/usr/lib/wx/include/gtk2-unicode-release-2.8 -MMD -MP -MF $@.d -o ${TESTDIR}/_ext/1234444453/TestStringContainer.o /home/igormq/NetBeansProjects/Statistics/tests/TestStringContainer.cpp
+	$(COMPILE.cc) -g -DNDEBUG -DWXNO_RTTI -D__WXGTK__ -I. -I/usr/lib/wx/include/gtk2-unicode-release-2.8 -I/usr/local/include/wx-2.8 -I/usr/local/lib/wx/include/gtk2-ansi-release-2.8 -MMD -MP -MF $@.d -o ${TESTDIR}/tests/TestStringContainer.o tests/TestStringContainer.cpp
 
 
-${TESTDIR}/_ext/1234444453/TestRunnerStringStatistics.o: /home/igormq/NetBeansProjects/Statistics/tests/TestRunnerStringStatistics.cpp 
-	${MKDIR} -p ${TESTDIR}/_ext/1234444453
+${TESTDIR}/tests/TestRunnerStringStatistics.o: tests/TestRunnerStringStatistics.cpp 
+	${MKDIR} -p ${TESTDIR}/tests
 	${RM} $@.d
-	$(COMPILE.cc) -g -D__WXGTK__ -I. -I/usr/lib/wx/include/gtk2-unicode-release-2.8 -MMD -MP -MF $@.d -o ${TESTDIR}/_ext/1234444453/TestRunnerStringStatistics.o /home/igormq/NetBeansProjects/Statistics/tests/TestRunnerStringStatistics.cpp
+	$(COMPILE.cc) -g -DNDEBUG -DWXNO_RTTI -D__WXGTK__ -I. -I/usr/lib/wx/include/gtk2-unicode-release-2.8 -I/usr/local/include/wx-2.8 -I/usr/local/lib/wx/include/gtk2-ansi-release-2.8 -MMD -MP -MF $@.d -o ${TESTDIR}/tests/TestRunnerStringStatistics.o tests/TestRunnerStringStatistics.cpp
 
 
-${TESTDIR}/_ext/1234444453/testStringStatisticsClass.o: /home/igormq/NetBeansProjects/Statistics/tests/testStringStatisticsClass.cpp 
-	${MKDIR} -p ${TESTDIR}/_ext/1234444453
+${TESTDIR}/tests/testStringStatisticsClass.o: tests/testStringStatisticsClass.cpp 
+	${MKDIR} -p ${TESTDIR}/tests
 	${RM} $@.d
-	$(COMPILE.cc) -g -D__WXGTK__ -I. -I/usr/lib/wx/include/gtk2-unicode-release-2.8 -MMD -MP -MF $@.d -o ${TESTDIR}/_ext/1234444453/testStringStatisticsClass.o /home/igormq/NetBeansProjects/Statistics/tests/testStringStatisticsClass.cpp
+	$(COMPILE.cc) -g -DNDEBUG -DWXNO_RTTI -D__WXGTK__ -I. -I/usr/lib/wx/include/gtk2-unicode-release-2.8 -I/usr/local/include/wx-2.8 -I/usr/local/lib/wx/include/gtk2-ansi-release-2.8 -MMD -MP -MF $@.d -o ${TESTDIR}/tests/testStringStatisticsClass.o tests/testStringStatisticsClass.cpp
 
 
 ${OBJECTDIR}/FileProcessor_nomain.o: ${OBJECTDIR}/FileProcessor.o FileProcessor.cpp 
@@ -155,7 +166,7 @@ ${OBJECTDIR}/FileProcessor_nomain.o: ${OBJECTDIR}/FileProcessor.o FileProcessor.
 	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
 	then  \
 	    ${RM} $@.d;\
-	    $(COMPILE.cc) -g -D__WXGTK__ -I/usr/lib/wx/include/gtk2-unicode-release-2.8 -Dmain=__nomain -MMD -MP -MF $@.d -o ${OBJECTDIR}/FileProcessor_nomain.o FileProcessor.cpp;\
+	    $(COMPILE.cc) -g -DNDEBUG -DWXNO_RTTI -D__WXGTK__ -I/usr/lib/wx/include/gtk2-unicode-release-2.8 -I/usr/local/include/wx-2.8 -I/usr/local/lib/wx/include/gtk2-ansi-release-2.8 -Dmain=__nomain -MMD -MP -MF $@.d -o ${OBJECTDIR}/FileProcessor_nomain.o FileProcessor.cpp;\
 	else  \
 	    ${CP} ${OBJECTDIR}/FileProcessor.o ${OBJECTDIR}/FileProcessor_nomain.o;\
 	fi
@@ -168,9 +179,22 @@ ${OBJECTDIR}/StringCounter_nomain.o: ${OBJECTDIR}/StringCounter.o StringCounter.
 	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
 	then  \
 	    ${RM} $@.d;\
-	    $(COMPILE.cc) -g -D__WXGTK__ -I/usr/lib/wx/include/gtk2-unicode-release-2.8 -Dmain=__nomain -MMD -MP -MF $@.d -o ${OBJECTDIR}/StringCounter_nomain.o StringCounter.cpp;\
+	    $(COMPILE.cc) -g -DNDEBUG -DWXNO_RTTI -D__WXGTK__ -I/usr/lib/wx/include/gtk2-unicode-release-2.8 -I/usr/local/include/wx-2.8 -I/usr/local/lib/wx/include/gtk2-ansi-release-2.8 -Dmain=__nomain -MMD -MP -MF $@.d -o ${OBJECTDIR}/StringCounter_nomain.o StringCounter.cpp;\
 	else  \
 	    ${CP} ${OBJECTDIR}/StringCounter.o ${OBJECTDIR}/StringCounter_nomain.o;\
+	fi
+
+${OBJECTDIR}/_ext/758266167/wxTranslationHelper_nomain.o: ${OBJECTDIR}/_ext/758266167/wxTranslationHelper.o /home/igormq/NetBeansProjects/Statistics/wxTranslationHelper.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/758266167
+	@NMOUTPUT=`${NM} ${OBJECTDIR}/_ext/758266167/wxTranslationHelper.o`; \
+	if (echo "$$NMOUTPUT" | ${GREP} '|main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
+	then  \
+	    ${RM} $@.d;\
+	    $(COMPILE.cc) -g -DNDEBUG -DWXNO_RTTI -D__WXGTK__ -I/usr/lib/wx/include/gtk2-unicode-release-2.8 -I/usr/local/include/wx-2.8 -I/usr/local/lib/wx/include/gtk2-ansi-release-2.8 -Dmain=__nomain -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/758266167/wxTranslationHelper_nomain.o /home/igormq/NetBeansProjects/Statistics/wxTranslationHelper.cpp;\
+	else  \
+	    ${CP} ${OBJECTDIR}/_ext/758266167/wxTranslationHelper.o ${OBJECTDIR}/_ext/758266167/wxTranslationHelper_nomain.o;\
 	fi
 
 ${OBJECTDIR}/main_nomain.o: ${OBJECTDIR}/main.o main.cpp 
@@ -181,7 +205,7 @@ ${OBJECTDIR}/main_nomain.o: ${OBJECTDIR}/main.o main.cpp
 	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
 	then  \
 	    ${RM} $@.d;\
-	    $(COMPILE.cc) -g -D__WXGTK__ -I/usr/lib/wx/include/gtk2-unicode-release-2.8 -Dmain=__nomain -MMD -MP -MF $@.d -o ${OBJECTDIR}/main_nomain.o main.cpp;\
+	    $(COMPILE.cc) -g -DNDEBUG -DWXNO_RTTI -D__WXGTK__ -I/usr/lib/wx/include/gtk2-unicode-release-2.8 -I/usr/local/include/wx-2.8 -I/usr/local/lib/wx/include/gtk2-ansi-release-2.8 -Dmain=__nomain -MMD -MP -MF $@.d -o ${OBJECTDIR}/main_nomain.o main.cpp;\
 	else  \
 	    ${CP} ${OBJECTDIR}/main.o ${OBJECTDIR}/main_nomain.o;\
 	fi
@@ -194,7 +218,7 @@ ${OBJECTDIR}/MainApp_nomain.o: ${OBJECTDIR}/MainApp.o MainApp.cpp
 	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
 	then  \
 	    ${RM} $@.d;\
-	    $(COMPILE.cc) -g -D__WXGTK__ -I/usr/lib/wx/include/gtk2-unicode-release-2.8 -Dmain=__nomain -MMD -MP -MF $@.d -o ${OBJECTDIR}/MainApp_nomain.o MainApp.cpp;\
+	    $(COMPILE.cc) -g -DNDEBUG -DWXNO_RTTI -D__WXGTK__ -I/usr/lib/wx/include/gtk2-unicode-release-2.8 -I/usr/local/include/wx-2.8 -I/usr/local/lib/wx/include/gtk2-ansi-release-2.8 -Dmain=__nomain -MMD -MP -MF $@.d -o ${OBJECTDIR}/MainApp_nomain.o MainApp.cpp;\
 	else  \
 	    ${CP} ${OBJECTDIR}/MainApp.o ${OBJECTDIR}/MainApp_nomain.o;\
 	fi
@@ -207,7 +231,7 @@ ${OBJECTDIR}/MainFrame_nomain.o: ${OBJECTDIR}/MainFrame.o MainFrame.cpp
 	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
 	then  \
 	    ${RM} $@.d;\
-	    $(COMPILE.cc) -g -D__WXGTK__ -I/usr/lib/wx/include/gtk2-unicode-release-2.8 -Dmain=__nomain -MMD -MP -MF $@.d -o ${OBJECTDIR}/MainFrame_nomain.o MainFrame.cpp;\
+	    $(COMPILE.cc) -g -DNDEBUG -DWXNO_RTTI -D__WXGTK__ -I/usr/lib/wx/include/gtk2-unicode-release-2.8 -I/usr/local/include/wx-2.8 -I/usr/local/lib/wx/include/gtk2-ansi-release-2.8 -Dmain=__nomain -MMD -MP -MF $@.d -o ${OBJECTDIR}/MainFrame_nomain.o MainFrame.cpp;\
 	else  \
 	    ${CP} ${OBJECTDIR}/MainFrame.o ${OBJECTDIR}/MainFrame_nomain.o;\
 	fi
@@ -220,7 +244,7 @@ ${OBJECTDIR}/StringStatistics_nomain.o: ${OBJECTDIR}/StringStatistics.o StringSt
 	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
 	then  \
 	    ${RM} $@.d;\
-	    $(COMPILE.cc) -g -D__WXGTK__ -I/usr/lib/wx/include/gtk2-unicode-release-2.8 -Dmain=__nomain -MMD -MP -MF $@.d -o ${OBJECTDIR}/StringStatistics_nomain.o StringStatistics.cpp;\
+	    $(COMPILE.cc) -g -DNDEBUG -DWXNO_RTTI -D__WXGTK__ -I/usr/lib/wx/include/gtk2-unicode-release-2.8 -I/usr/local/include/wx-2.8 -I/usr/local/lib/wx/include/gtk2-ansi-release-2.8 -Dmain=__nomain -MMD -MP -MF $@.d -o ${OBJECTDIR}/StringStatistics_nomain.o StringStatistics.cpp;\
 	else  \
 	    ${CP} ${OBJECTDIR}/StringStatistics.o ${OBJECTDIR}/StringStatistics_nomain.o;\
 	fi
@@ -233,7 +257,7 @@ ${OBJECTDIR}/StringContainer_nomain.o: ${OBJECTDIR}/StringContainer.o StringCont
 	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
 	then  \
 	    ${RM} $@.d;\
-	    $(COMPILE.cc) -g -D__WXGTK__ -I/usr/lib/wx/include/gtk2-unicode-release-2.8 -Dmain=__nomain -MMD -MP -MF $@.d -o ${OBJECTDIR}/StringContainer_nomain.o StringContainer.cpp;\
+	    $(COMPILE.cc) -g -DNDEBUG -DWXNO_RTTI -D__WXGTK__ -I/usr/lib/wx/include/gtk2-unicode-release-2.8 -I/usr/local/include/wx-2.8 -I/usr/local/lib/wx/include/gtk2-ansi-release-2.8 -Dmain=__nomain -MMD -MP -MF $@.d -o ${OBJECTDIR}/StringContainer_nomain.o StringContainer.cpp;\
 	else  \
 	    ${CP} ${OBJECTDIR}/StringContainer.o ${OBJECTDIR}/StringContainer_nomain.o;\
 	fi
@@ -243,6 +267,7 @@ ${OBJECTDIR}/StringContainer_nomain.o: ${OBJECTDIR}/StringContainer.o StringCont
 	@if [ "${TEST}" = "" ]; \
 	then  \
 	    ${TESTDIR}/TestFiles/f1 || true; \
+	    ${TESTDIR}/TestFiles/f2 || true; \
 	    ${TESTDIR}/TestFiles/f2 || true; \
 	else  \
 	    ./${TEST} || true; \

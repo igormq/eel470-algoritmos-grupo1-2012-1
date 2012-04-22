@@ -23,12 +23,14 @@ public:
     void OnAbout(wxCommandEvent& event);
     void OnOpen(wxCommandEvent& event);
     void OnClear(wxCommandEvent& event);
+    void OnSelectLanguage(wxCommandEvent& event);
     enum
     {
         ID_Quit = 1,
         ID_Open,
         ID_Clear,
         ID_About,
+        ID_Select_Language
     };
  private:
      wxMenu *menuFile;
