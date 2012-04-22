@@ -9,10 +9,16 @@
 #define	MAINAPP_H
 
 #include "wx/wx.h"
+#include "wxTranslationHelper.h"
 
 class MainApp : public wxApp {
+ public:
+    wxTranslationHelper * m_TranslationHelper;
     virtual bool OnInit();
+    virtual int OnExit();
+    bool SelectLanguage();
+    void RecreateGUI();
 };
-
+DECLARE_APP(MainApp);
 #endif	/* MAINAPP_H */
 

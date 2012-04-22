@@ -36,6 +36,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 OBJECTFILES= \
 	${OBJECTDIR}/FileProcessor.o \
 	${OBJECTDIR}/StringCounter.o \
+	${OBJECTDIR}/_ext/758266167/wxTranslationHelper.o \
 	${OBJECTDIR}/main.o \
 	${OBJECTDIR}/MainApp.o \
 	${OBJECTDIR}/MainFrame.o \
@@ -47,6 +48,7 @@ TESTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}/tests
 
 # Test Files
 TESTFILES= \
+	${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/statistics \
 	${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/statistics \
 	${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/statistics
 
@@ -84,6 +86,11 @@ ${OBJECTDIR}/StringCounter.o: StringCounter.cpp
 	${RM} $@.d
 	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/StringCounter.o StringCounter.cpp
 
+${OBJECTDIR}/_ext/758266167/wxTranslationHelper.o: /home/igormq/NetBeansProjects/Statistics/wxTranslationHelper.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/758266167
+	${RM} $@.d
+	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/758266167/wxTranslationHelper.o /home/igormq/NetBeansProjects/Statistics/wxTranslationHelper.cpp
+
 ${OBJECTDIR}/main.o: main.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
@@ -114,37 +121,41 @@ ${OBJECTDIR}/StringContainer.o: StringContainer.cpp
 
 # Build Test Targets
 .build-tests-conf: .build-conf ${TESTFILES}
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/statistics: ${TESTDIR}/_ext/1234444453/TestRunner.o ${TESTDIR}/_ext/1234444453/TestStringContainer.o ${OBJECTFILES:%.o=%_nomain.o}
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/statistics: ${TESTDIR}/tests/TestRunner.o ${TESTDIR}/tests/TestStringContainer.o ${OBJECTFILES:%.o=%_nomain.o}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc}   -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/statistics $^ ${LDLIBSOPTIONS} 
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/statistics: ${TESTDIR}/_ext/1234444453/TestRunnerStringStatistics.o ${TESTDIR}/_ext/1234444453/testStringStatisticsClass.o ${OBJECTFILES:%.o=%_nomain.o}
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/statistics: ${TESTDIR}/tests/TestRunnerStringStatistics.o ${TESTDIR}/tests/testStringStatisticsClass.o ${OBJECTFILES:%.o=%_nomain.o}
+	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
+	${LINK.cc}   -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/statistics $^ ${LDLIBSOPTIONS} 
+
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/statistics: ${OBJECTFILES:%.o=%_nomain.o}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc}   -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/statistics $^ ${LDLIBSOPTIONS} 
 
 
-${TESTDIR}/_ext/1234444453/TestRunner.o: /home/igormq/NetBeansProjects/Statistics/tests/TestRunner.cpp 
-	${MKDIR} -p ${TESTDIR}/_ext/1234444453
+${TESTDIR}/tests/TestRunner.o: tests/TestRunner.cpp 
+	${MKDIR} -p ${TESTDIR}/tests
 	${RM} $@.d
-	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${TESTDIR}/_ext/1234444453/TestRunner.o /home/igormq/NetBeansProjects/Statistics/tests/TestRunner.cpp
+	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${TESTDIR}/tests/TestRunner.o tests/TestRunner.cpp
 
 
-${TESTDIR}/_ext/1234444453/TestStringContainer.o: /home/igormq/NetBeansProjects/Statistics/tests/TestStringContainer.cpp 
-	${MKDIR} -p ${TESTDIR}/_ext/1234444453
+${TESTDIR}/tests/TestStringContainer.o: tests/TestStringContainer.cpp 
+	${MKDIR} -p ${TESTDIR}/tests
 	${RM} $@.d
-	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${TESTDIR}/_ext/1234444453/TestStringContainer.o /home/igormq/NetBeansProjects/Statistics/tests/TestStringContainer.cpp
+	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${TESTDIR}/tests/TestStringContainer.o tests/TestStringContainer.cpp
 
 
-${TESTDIR}/_ext/1234444453/TestRunnerStringStatistics.o: /home/igormq/NetBeansProjects/Statistics/tests/TestRunnerStringStatistics.cpp 
-	${MKDIR} -p ${TESTDIR}/_ext/1234444453
+${TESTDIR}/tests/TestRunnerStringStatistics.o: tests/TestRunnerStringStatistics.cpp 
+	${MKDIR} -p ${TESTDIR}/tests
 	${RM} $@.d
-	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${TESTDIR}/_ext/1234444453/TestRunnerStringStatistics.o /home/igormq/NetBeansProjects/Statistics/tests/TestRunnerStringStatistics.cpp
+	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${TESTDIR}/tests/TestRunnerStringStatistics.o tests/TestRunnerStringStatistics.cpp
 
 
-${TESTDIR}/_ext/1234444453/testStringStatisticsClass.o: /home/igormq/NetBeansProjects/Statistics/tests/testStringStatisticsClass.cpp 
-	${MKDIR} -p ${TESTDIR}/_ext/1234444453
+${TESTDIR}/tests/testStringStatisticsClass.o: tests/testStringStatisticsClass.cpp 
+	${MKDIR} -p ${TESTDIR}/tests
 	${RM} $@.d
-	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${TESTDIR}/_ext/1234444453/testStringStatisticsClass.o /home/igormq/NetBeansProjects/Statistics/tests/testStringStatisticsClass.cpp
+	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${TESTDIR}/tests/testStringStatisticsClass.o tests/testStringStatisticsClass.cpp
 
 
 ${OBJECTDIR}/FileProcessor_nomain.o: ${OBJECTDIR}/FileProcessor.o FileProcessor.cpp 
@@ -171,6 +182,19 @@ ${OBJECTDIR}/StringCounter_nomain.o: ${OBJECTDIR}/StringCounter.o StringCounter.
 	    $(COMPILE.cc) -O2 -Dmain=__nomain -MMD -MP -MF $@.d -o ${OBJECTDIR}/StringCounter_nomain.o StringCounter.cpp;\
 	else  \
 	    ${CP} ${OBJECTDIR}/StringCounter.o ${OBJECTDIR}/StringCounter_nomain.o;\
+	fi
+
+${OBJECTDIR}/_ext/758266167/wxTranslationHelper_nomain.o: ${OBJECTDIR}/_ext/758266167/wxTranslationHelper.o /home/igormq/NetBeansProjects/Statistics/wxTranslationHelper.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/758266167
+	@NMOUTPUT=`${NM} ${OBJECTDIR}/_ext/758266167/wxTranslationHelper.o`; \
+	if (echo "$$NMOUTPUT" | ${GREP} '|main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
+	then  \
+	    ${RM} $@.d;\
+	    $(COMPILE.cc) -O2 -Dmain=__nomain -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/758266167/wxTranslationHelper_nomain.o /home/igormq/NetBeansProjects/Statistics/wxTranslationHelper.cpp;\
+	else  \
+	    ${CP} ${OBJECTDIR}/_ext/758266167/wxTranslationHelper.o ${OBJECTDIR}/_ext/758266167/wxTranslationHelper_nomain.o;\
 	fi
 
 ${OBJECTDIR}/main_nomain.o: ${OBJECTDIR}/main.o main.cpp 
@@ -242,6 +266,7 @@ ${OBJECTDIR}/StringContainer_nomain.o: ${OBJECTDIR}/StringContainer.o StringCont
 .test-conf:
 	@if [ "${TEST}" = "" ]; \
 	then  \
+	    ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/statistics || true; \
 	    ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/statistics || true; \
 	    ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/statistics || true; \
 	else  \

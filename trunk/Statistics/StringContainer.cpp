@@ -10,8 +10,14 @@
 #include <exception>
 #include <string.h>
 #include <iostream>
-//Constructors and destructors;
 
+/**
+ * Constructor
+ * @param inStr input string
+ * @param inValidChars valid characters to validate the input string
+ * @param accents
+ * @param noAccents
+ */
 StringContainer::StringContainer(std::string inStr,
                                  std::string inValidChars,
                                  std::string accents, 
@@ -49,8 +55,12 @@ StringContainer::~StringContainer() {
 }
 
 
-//Data retrieve
 
+/**
+ * Data Retrieve
+ * @param pos Postion of word
+ * @return a word in a set
+ */
 std::string StringContainer::getWord(int pos) const {
     return this->m_Strings[pos];
 }
@@ -79,20 +89,20 @@ bool StringContainer::charIsValid(char inChar) {
  */
 void StringContainer::toSafe(std::string & str) {
     int i, j;
+    
     for(i = 0 ; i < str.length(); i++)
     {
         for(j = 0; j < this->countAccents; j++)
         {
-            char k = str[i];
             if(str[i] == this->m_Accents[j])
             {
-                str[i] == this->m_NoAccents[j];
-                j = this->countAccents;
+                str[i] = this->m_NoAccents[j];
             }
         }
     }
     //To Lower Entire String
     std::transform(str.begin(), str.end(), str.begin(), ::tolower);
+    std::cout << '\n' << str << std::endl;
 }
 
 std::string StringContainer::getFirstValidWord(std::string & inStr) {

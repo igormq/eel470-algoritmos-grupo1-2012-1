@@ -13,12 +13,10 @@
 //                          "0123456789"
 #define DEFAULTVALID "abcdefghijklmnopqrstuvwxyz"\
                           "0123456789"
-#define DEFAULTACCENTS "Γ΅Γ©Γ­Γ³ΓΊΓ Γ¨Γ¬Γ²ΓΉΓ£αΊ½Δ©ΓµΕ©ΓΆΓªΓ®Γ΄Γ»Γ¤Γ«Γ―Γ¶ΓΌ"\
-                       "ΓΓ‰ΓΓ“ΓΓ€ΓΓΓ’Γ™ΓƒαΊΌΔ¨Γ•Ε¨Γ‚ΓΓΓ”Γ›Γ„Γ‹ΓΓ–Γ"\
-                       "Γ§Γ‡Γ Γ¨Γ¬Γ²ΓΉ"
-#define DEFAULTNOACCENTS "aeiouaeiouaeiouaeiouaeiou"\
-                         "aeiouaeiouaeiouaeiouaeiou"\
-                         "ccaeiou"
+#define DEFAULTACCENTS "αινσϊΰθμςωβκξτϋδλοφόγ?υ"\
+                       "ΑΙΝΣΪΐΘΜÒΩΒΚΞΤΫΔΛΟΦάΓ?Υ"\
+                       "Ηη"
+#define DEFAULTNOACCENTS "aeiouaeiouaeiouaeiouaeoaeiouaeiouaeiouaeiouaeocc"
 
 #include <string>
 #include <deque>

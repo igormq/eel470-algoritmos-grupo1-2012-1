@@ -18,11 +18,11 @@ StringStatistics::StringStatistics(const StringStatistics& orig) {
 StringStatistics::~StringStatistics() {
 }
 
-
-/**This method will verify if there is already a string on the statistic,
+/**
+ *This method will verify if there is already a string on the statistic,
  *increasing the counter. If there isn't, will insert a new object to 
  *the statistic.
- * @param inStr, the string that will iterate to the statistics
+ * @param inStr the string that will iterate to the statistics
  */
 void StringStatistics::add(std::string inStr){
     bool found = false;
@@ -54,6 +54,12 @@ std::set<StringCounter> StringStatistics::getData() const{
     return this->data;
 }
 
+/**
+ * Generate a pretty output of data
+ * @param os
+ * @param obj
+ * @return 
+ */
 std::ostream& operator<< (std::ostream &os,const StringStatistics &obj) {
     std::set<StringCounter> data = obj.getData();
     std::set<StringCounter>::iterator it;
