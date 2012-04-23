@@ -36,8 +36,8 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 OBJECTFILES= \
 	${OBJECTDIR}/FileProcessor.o \
 	${OBJECTDIR}/StringCounter.o \
-	${OBJECTDIR}/_ext/758266167/wxTranslationHelper.o \
 	${OBJECTDIR}/main.o \
+	${OBJECTDIR}/wxTranslationHelper.o \
 	${OBJECTDIR}/MainApp.o \
 	${OBJECTDIR}/MainFrame.o \
 	${OBJECTDIR}/StringStatistics.o \
@@ -86,15 +86,15 @@ ${OBJECTDIR}/StringCounter.o: StringCounter.cpp
 	${RM} $@.d
 	$(COMPILE.cc) -g -DNDEBUG -DWXNO_RTTI -D__WXGTK__ -I/usr/lib/wx/include/gtk2-unicode-release-2.8 -I/usr/local/include/wx-2.8 -I/usr/local/lib/wx/include/gtk2-ansi-release-2.8 -MMD -MP -MF $@.d -o ${OBJECTDIR}/StringCounter.o StringCounter.cpp
 
-${OBJECTDIR}/_ext/758266167/wxTranslationHelper.o: /home/igormq/NetBeansProjects/Statistics/wxTranslationHelper.cpp 
-	${MKDIR} -p ${OBJECTDIR}/_ext/758266167
-	${RM} $@.d
-	$(COMPILE.cc) -g -DNDEBUG -DWXNO_RTTI -D__WXGTK__ -I/usr/lib/wx/include/gtk2-unicode-release-2.8 -I/usr/local/include/wx-2.8 -I/usr/local/lib/wx/include/gtk2-ansi-release-2.8 -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/758266167/wxTranslationHelper.o /home/igormq/NetBeansProjects/Statistics/wxTranslationHelper.cpp
-
 ${OBJECTDIR}/main.o: main.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
 	$(COMPILE.cc) -g -DNDEBUG -DWXNO_RTTI -D__WXGTK__ -I/usr/lib/wx/include/gtk2-unicode-release-2.8 -I/usr/local/include/wx-2.8 -I/usr/local/lib/wx/include/gtk2-ansi-release-2.8 -MMD -MP -MF $@.d -o ${OBJECTDIR}/main.o main.cpp
+
+${OBJECTDIR}/wxTranslationHelper.o: wxTranslationHelper.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -g -DNDEBUG -DWXNO_RTTI -D__WXGTK__ -I/usr/lib/wx/include/gtk2-unicode-release-2.8 -I/usr/local/include/wx-2.8 -I/usr/local/lib/wx/include/gtk2-ansi-release-2.8 -MMD -MP -MF $@.d -o ${OBJECTDIR}/wxTranslationHelper.o wxTranslationHelper.cpp
 
 ${OBJECTDIR}/MainApp.o: MainApp.cpp 
 	${MKDIR} -p ${OBJECTDIR}
@@ -184,19 +184,6 @@ ${OBJECTDIR}/StringCounter_nomain.o: ${OBJECTDIR}/StringCounter.o StringCounter.
 	    ${CP} ${OBJECTDIR}/StringCounter.o ${OBJECTDIR}/StringCounter_nomain.o;\
 	fi
 
-${OBJECTDIR}/_ext/758266167/wxTranslationHelper_nomain.o: ${OBJECTDIR}/_ext/758266167/wxTranslationHelper.o /home/igormq/NetBeansProjects/Statistics/wxTranslationHelper.cpp 
-	${MKDIR} -p ${OBJECTDIR}/_ext/758266167
-	@NMOUTPUT=`${NM} ${OBJECTDIR}/_ext/758266167/wxTranslationHelper.o`; \
-	if (echo "$$NMOUTPUT" | ${GREP} '|main$$') || \
-	   (echo "$$NMOUTPUT" | ${GREP} 'T main$$') || \
-	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
-	then  \
-	    ${RM} $@.d;\
-	    $(COMPILE.cc) -g -DNDEBUG -DWXNO_RTTI -D__WXGTK__ -I/usr/lib/wx/include/gtk2-unicode-release-2.8 -I/usr/local/include/wx-2.8 -I/usr/local/lib/wx/include/gtk2-ansi-release-2.8 -Dmain=__nomain -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/758266167/wxTranslationHelper_nomain.o /home/igormq/NetBeansProjects/Statistics/wxTranslationHelper.cpp;\
-	else  \
-	    ${CP} ${OBJECTDIR}/_ext/758266167/wxTranslationHelper.o ${OBJECTDIR}/_ext/758266167/wxTranslationHelper_nomain.o;\
-	fi
-
 ${OBJECTDIR}/main_nomain.o: ${OBJECTDIR}/main.o main.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	@NMOUTPUT=`${NM} ${OBJECTDIR}/main.o`; \
@@ -208,6 +195,19 @@ ${OBJECTDIR}/main_nomain.o: ${OBJECTDIR}/main.o main.cpp
 	    $(COMPILE.cc) -g -DNDEBUG -DWXNO_RTTI -D__WXGTK__ -I/usr/lib/wx/include/gtk2-unicode-release-2.8 -I/usr/local/include/wx-2.8 -I/usr/local/lib/wx/include/gtk2-ansi-release-2.8 -Dmain=__nomain -MMD -MP -MF $@.d -o ${OBJECTDIR}/main_nomain.o main.cpp;\
 	else  \
 	    ${CP} ${OBJECTDIR}/main.o ${OBJECTDIR}/main_nomain.o;\
+	fi
+
+${OBJECTDIR}/wxTranslationHelper_nomain.o: ${OBJECTDIR}/wxTranslationHelper.o wxTranslationHelper.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	@NMOUTPUT=`${NM} ${OBJECTDIR}/wxTranslationHelper.o`; \
+	if (echo "$$NMOUTPUT" | ${GREP} '|main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
+	then  \
+	    ${RM} $@.d;\
+	    $(COMPILE.cc) -g -DNDEBUG -DWXNO_RTTI -D__WXGTK__ -I/usr/lib/wx/include/gtk2-unicode-release-2.8 -I/usr/local/include/wx-2.8 -I/usr/local/lib/wx/include/gtk2-ansi-release-2.8 -Dmain=__nomain -MMD -MP -MF $@.d -o ${OBJECTDIR}/wxTranslationHelper_nomain.o wxTranslationHelper.cpp;\
+	else  \
+	    ${CP} ${OBJECTDIR}/wxTranslationHelper.o ${OBJECTDIR}/wxTranslationHelper_nomain.o;\
 	fi
 
 ${OBJECTDIR}/MainApp_nomain.o: ${OBJECTDIR}/MainApp.o MainApp.cpp 

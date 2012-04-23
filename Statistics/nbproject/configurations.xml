@@ -10,7 +10,7 @@
       <itemPath>StringContainer.h</itemPath>
       <itemPath>StringCounter.h</itemPath>
       <itemPath>StringStatistics.h</itemPath>
-      <itemPath>/home/igormq/NetBeansProjects/Statistics/wxTranslationHelper.h</itemPath>
+      <itemPath>wxTranslationHelper.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -21,7 +21,7 @@
       <itemPath>StringContainer.cpp</itemPath>
       <itemPath>StringCounter.cpp</itemPath>
       <itemPath>StringStatistics.cpp</itemPath>
-      <itemPath>/home/igormq/NetBeansProjects/Statistics/wxTranslationHelper.cpp</itemPath>
+      <itemPath>wxTranslationHelper.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"

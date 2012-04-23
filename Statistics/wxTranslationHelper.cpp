@@ -42,14 +42,11 @@ bool wxTranslationHelper::Load() {
             if (m_Locale) wxDELETE(m_Locale);
             m_Locale = new wxLocale;
             m_Locale->Init(identifiers[i]);
-            m_Locale->AddCatalogLookupPathPrefix(wxPathOnly(m_App.argv[0]));
-            m_Locale->AddCatalogLookupPathPrefix(_("./"));
+            m_Locale->AddCatalogLookupPathPrefix(wxPathOnly(m_App.argv[0]) + wxFileName::GetPathSeparator() + wxT("Language"));
             m_Locale->AddCatalog(m_App.GetAppName());
-            #ifdef __WXGTK__
-            m_Locale->AddCatalogLookupPathPrefix(wxT("/usr"));
-            m_Locale->AddCatalogLookupPathPrefix(wxT("/usr/local"));
-            //m_Locale->AddCatalogLookupPathPrefix();
-            #endif
+#ifdef __WXGTK__
+            m_Locale->AddCatalogLookupPathPrefix(wxPathOnly(wxT("./")) + wxFileName::GetPathSeparator() + wxT("Language"));
+#endif
 
             return true;
         }
@@ -73,15 +70,15 @@ void wxTranslationHelper::GetInstalledLanguages(wxArrayString & names,
         wxArrayLong & identifiers) {
     names.Clear();
     identifiers.Clear();
-    wxDir dir(wxPathOnly(m_App.argv[0]));
+    wxDir dir(wxPathOnly(m_App.argv[0]) + wxFileName::GetPathSeparator() + wxT("Language"));
     wxString filename;
     const wxLanguageInfo * langinfo;
     wxString name = wxLocale::GetLanguageName(wxLANGUAGE_DEFAULT);
     if (!name.IsEmpty()) {
-        names.Add(_("English"));
+        names.Add(name);
         identifiers.Add(wxLANGUAGE_DEFAULT);
     }
-    for (bool cont = dir.GetFirst(&filename, wxT("*.*"), wxDIR_DIRS);
+    for (bool cont = dir.GetFirst(&filename, wxT(""), wxDIR_DIRS);
             cont; cont = dir.GetNext(&filename)) {
         wxLogTrace(wxTraceMask(),
                 _("wxTranslationHelper: Directory found = \"%s\""),
@@ -110,7 +107,10 @@ bool wxTranslationHelper::AskUserForLanguage(wxArrayString & names,
         }
         m_Locale = new wxLocale;
         m_Locale->Init(identifiers[index]);
-        m_Locale->AddCatalogLookupPathPrefix(wxPathOnly(m_App.argv[0]));
+        m_Locale->AddCatalogLookupPathPrefix(wxPathOnly(m_App.argv[0]) + wxFileName::GetPathSeparator() + wxT("Language"));
+#ifdef __WXGTK__
+        m_Locale->AddCatalogLookupPathPrefix(wxPathOnly(wxT("./")) + wxFileName::GetPathSeparator() + wxT("Language"));
+#endif
         wxLogTrace(wxTraceMask(),
                 _("wxTranslationHelper: Path Prefix = \"%s\""),
                 wxPathOnly(m_App.argv[0]).GetData());
