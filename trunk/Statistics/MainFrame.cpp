@@ -91,20 +91,20 @@ void MainFrame::OnAbout(wxCommandEvent& WXUNUSED(event)) {
     info.SetVersion(_("1.0"));
     info.SetDescription(_("This program generate a statistics from strings."));
     info.SetCopyright(_("(C) 2012 - UFRJ - Departamento de Eletronica"));
-    info.AddDeveloper(_("Igor Macedo Quintanilha"));
     info.AddDeveloper(_("Bernardo Dornellas Cysneiros Gomes de Amorim"));
-    info.AddDeveloper(_("Roberto de Moura Estevao Filho"));
-    info.AddDeveloper(_("Pedro Menezes Ribeiro de Sousa"));
-    info.AddDeveloper(_("Luciano Vargas dos Santos"));
-    info.AddDeveloper(_("Tiago Monnerat de Faria Lopes"));
-    info.AddDeveloper(_("Mauricio Lamarao Mota"));
     info.AddDeveloper(_("Daniel Miceli"));
-    info.AddDeveloper(_("Luis Fernando Mascarenhas Carneiro de Almeida"));
-    info.AddDeveloper(_("Thais Correa da Silva"));
-    info.AddDeveloper(_("Tatiana Sciammarella"));
     info.AddDeveloper(_("Daniel Pereira"));
-    info.AddTranslator(_("Igor Macedo Quintanilha"));
+    info.AddDeveloper(_("Igor Macedo Quintanilha"));
+    info.AddDeveloper(_("Luciano Vargas dos Santos"));
+    info.AddDeveloper(_("Luis Fernando Mascarenhas Carneiro de Almeida"));
+    info.AddDeveloper(_("Mauricio Lamarao Mota"));
+    info.AddDeveloper(_("Pedro Menezes Ribeiro de Sousa"));
+    info.AddDeveloper(_("Roberto de Moura Estevao Filho"));
+    info.AddDeveloper(_("Tatiana Sciammarella"));
+    info.AddDeveloper(_("Thais Correa da Silva"));
+    info.AddDeveloper(_("Tiago Monnerat de Faria Lopes"));
     info.AddTranslator(_("Bernardo Dornellas Cysneiros Gomes de Amorim"));
+    info.AddTranslator(_("Igor Macedo Quintanilha"));
     wxAboutBox(info);
 }
 
@@ -141,6 +141,6 @@ void MainFrame::OnClear(wxCommandEvent& WXUNUSED(event)) {
 
 void MainFrame::OnSelectLanguage(wxCommandEvent& WXUNUSED(event)) {
     if(wxGetApp().SelectLanguage())
-        Refresh();
+       wxGetApp().RecreateGUI();
 }
 
