@@ -75,7 +75,7 @@ void wxTranslationHelper::GetInstalledLanguages(wxArrayString & names,
     const wxLanguageInfo * langinfo;
     wxString name = wxLocale::GetLanguageName(wxLANGUAGE_DEFAULT);
     if (!name.IsEmpty()) {
-        names.Add(name);
+        names.Add(_("Default"));
         identifiers.Add(wxLANGUAGE_DEFAULT);
     }
     for (bool cont = dir.GetFirst(&filename, wxT(""), wxDIR_DIRS);
