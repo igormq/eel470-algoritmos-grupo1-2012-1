@@ -1,0 +1,17 @@
+#summary One-sentence summary of this page.
+#labels Featured
+
+= Introduction =
+
+Software desenvolvido em C++ para a avaliação na disciplina Algortimo e Estruturas de Dados.
+
+== Uso do programa ==
+Este programa realiza a contagem das palavras encontradas em um arquivo _.txt_ fornecido pelo o usuário
+
+= Details =
+ Este programa faz o uso de:
+
+  # C++
+  # CPPUnit
+  # STL
+  # wxWidget
