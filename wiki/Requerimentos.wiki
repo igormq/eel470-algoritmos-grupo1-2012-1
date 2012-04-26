@@ -1,5 +1,5 @@
 #labels Phase-Deploy
-#O que se deve fazer antes de executar o projeto.
+# O que se deve fazer antes de executar o projeto.
 
 = Antes de rodar o projeto =
 
