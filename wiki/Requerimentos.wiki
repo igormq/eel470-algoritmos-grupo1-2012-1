@@ -1,0 +1,20 @@
+#labels Phase-Deploy
+#O que se deve fazer antes de executar o projeto.
+
+= Antes de rodar o projeto =
+
+Para que o projeto funcione de maneira adequada é necessário a instalação de alguns aplicativos antes:
+
+  * C++
+    Tenha certeza que você tenha o C++ instalado, no ubuntu utilize:
+     `sudo apt-get install build-essential`
+  * CPPUnit
+    `sudo apt-get install libcppunit-dev`
+  * wxWidget
+    [http://www.wxwidgets.org/downloads/ wxWidget Download]
+
+    Após baixar e instalar faça o que se segue:
+      http://wiki.wxwidgets.org/Compiling_and_getting_started
+      Para ubuntu: http://wiki.wxwidgets.org/Installing_and_configuring_under_Ubuntu
+  * NetBeans
+    Baixa e instale o netbeans: http://www.netbeans.org
