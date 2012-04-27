@@ -9,7 +9,7 @@ This software was developed in C++ as an assignment for 'Algoritimos e Estrutura
 This program is used to analyze word occurrence statistics in some given plain text file.
 
 == Usage ==
-Basically the user selects one text file at a time. For each file, the program seek for each word, normalize it, and store it. If the word was already found, the program increases it counter.
+Basically the user selects one text file at a time. For each file, the program seeks for each word, normalize it, and store it. If the word was already found, the program increases it counter.
 After reading the entire file, the program then prints on the screen some statistics about the words, such as occurence count and percentage for each word, and then, allows user to select another file.
 
 For each file added, the program just add those new words from that file.
