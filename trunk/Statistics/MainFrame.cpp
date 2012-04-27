@@ -46,22 +46,22 @@ MainFrame::MainFrame(const wxString& title, const wxPoint& pos, const wxSize& si
     this->menuBar->Append(menuHelp, _("&Help"));
     SetMenuBar(menuBar);
 
-    this->textCtrl = new wxTextCtrl(this, wxID_ANY, wxT("Welcome to Statistics Calculator!\nTo start go to File->Open or just press Ctrl+O"), wxDefaultPosition, wxDefaultSize, wxTE_PROCESS_ENTER | wxTE_MULTILINE | wxTE_READONLY);
+    this->textCtrl = new wxTextCtrl(this, wxID_ANY, _("Welcome to Statistics Calculator!\nTo start go to File->Open or just press Ctrl+O"), wxDefaultPosition, wxDefaultSize, wxTE_PROCESS_ENTER | wxTE_MULTILINE | wxTE_READONLY);
 
     wxImage::AddHandler(new wxPNGHandler);
 
-    wxBitmap openBitMap(_("./Images/open.png"), wxBITMAP_TYPE_PNG);
-    wxBitmap clearBitMap(_("./Images/clear.png"), wxBITMAP_TYPE_PNG);
-    wxBitmap exitBitMap(_("./Images/exit.png"), wxBITMAP_TYPE_PNG);
-    wxBitmap aboutBitMap(_("./Images/about.png"), wxBITMAP_TYPE_PNG);
+    wxBitmap openBitMap(wxT("./Images/open.png"), wxBITMAP_TYPE_PNG);
+    wxBitmap clearBitMap(wxT("./Images/clear.png"), wxBITMAP_TYPE_PNG);
+    wxBitmap exitBitMap(wxT("./Images/exit.png"), wxBITMAP_TYPE_PNG);
+    wxBitmap aboutBitMap(wxT("./Images/about.png"), wxBITMAP_TYPE_PNG);
 
     this->toolBar = new wxToolBar(this, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxTB_HORIZONTAL | wxNO_BORDER | wxTB_TEXT);
-    this->toolBar->AddTool(ID_Open, openBitMap, wxT("Open File (Ctrl+O"), _("Open Long String"));
-    this->toolBar->AddTool(ID_Clear, clearBitMap, _("Clear (Ctrl+R)"), _("Clear Long String"));
+    this->toolBar->AddTool(ID_Open, openBitMap, wxT("Open File (Ctrl+O"), _("Open a file to start generating statistics"));
+    this->toolBar->AddTool(ID_Clear, clearBitMap, _("Clear (Ctrl+R)"), _("Clear all statistics"));
     this->toolBar->AddSeparator();
-    this->toolBar->AddTool(ID_About, aboutBitMap, _("About"), _("About Long String"));
+    this->toolBar->AddTool(ID_About, aboutBitMap, _("About"), _("About"));
     this->toolBar->AddSeparator();
-    this->toolBar->AddTool(ID_Quit, exitBitMap, _("Exit(ALT+F4)"), _("Exit Long String"));
+    this->toolBar->AddTool(ID_Quit, exitBitMap, _("Exit(ALT+F4)"), _("Exit the program"));
     this->toolBar->Realize();
 
     SetToolBar(toolBar);
