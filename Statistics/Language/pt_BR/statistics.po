@@ -5,10 +5,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: pt\n"
+"Project-Id-Version: pt_BR_IMQ\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-21 23:48-0300\n"
-"PO-Revision-Date: 2012-04-22 00:07-0300\n"
+"POT-Creation-Date: 2012-04-26 21:17-0300\n"
+"PO-Revision-Date: 2012-04-26 21:25-0300\n"
 "Last-Translator: Igor Macedo Quintanilha <igormq@poli.ufrj.br>\n"
 "Language-Team: \n"
 "Language: \n"
@@ -16,199 +16,191 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-Language: Portuguese\n"
-"X-Poedit-Country: BRAZIL\n"
-"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-Country: Brazil\n"
+"X-Poedit-SourceCharset: UTF-8\n"
 
-#: NetBeansProjects/Statistics/MainFrame.cpp:42
+#: /home/igormq/NetBeansProjects/Statistics/MainFrame.cpp:42
 msgid "&About"
-msgstr "&Sobre"
+msgstr "So&bre"
 
-#: NetBeansProjects/Statistics/MainFrame.cpp:45
+#: /home/igormq/NetBeansProjects/Statistics/MainFrame.cpp:45
 msgid "&File"
 msgstr "&Arquivo"
 
-#: NetBeansProjects/Statistics/MainFrame.cpp:46
+#: /home/igormq/NetBeansProjects/Statistics/MainFrame.cpp:46
 msgid "&Help"
-msgstr "&Ajuda"
+msgstr "A&juda"
 
-#: NetBeansProjects/Statistics/MainFrame.cpp:40
+#: /home/igormq/NetBeansProjects/Statistics/MainFrame.cpp:40
 msgid "&Language\tCtrl-L"
 msgstr "&Idioma\tCtrl-I"
 
-#: NetBeansProjects/Statistics/MainFrame.cpp:34
+#: /home/igormq/NetBeansProjects/Statistics/MainFrame.cpp:34
 msgid "&Open\tCtrl-O"
-msgstr "A&brir\tCtrl-B"
+msgstr "Abri&r\tCtrl-R"
 
-#: NetBeansProjects/Statistics/MainFrame.cpp:93
+#: /home/igormq/NetBeansProjects/Statistics/MainFrame.cpp:93
 msgid "(C) 2012 - UFRJ - Departamento de Eletronica"
-msgstr ""
+msgstr "(C) 2012 - UFRJ - Departamento de Eletronica"
 
-#: NetBeansProjects/Statistics/MainFrame.cpp:56
-msgid "./Images/about.png"
-msgstr ""
-
-#: NetBeansProjects/Statistics/MainFrame.cpp:54
-msgid "./Images/clear.png"
-msgstr ""
-
-#: NetBeansProjects/Statistics/MainFrame.cpp:55
-msgid "./Images/exit.png"
-msgstr ""
-
-#: NetBeansProjects/Statistics/MainFrame.cpp:53
-msgid "./Images/open.png"
-msgstr ""
-
-#: NetBeansProjects/Statistics/MainFrame.cpp:91
+#: /home/igormq/NetBeansProjects/Statistics/MainFrame.cpp:91
 msgid "1.0"
-msgstr ""
+msgstr "1.0"
 
-#: NetBeansProjects/Statistics/MainFrame.cpp:62
+#: /home/igormq/NetBeansProjects/Statistics/MainFrame.cpp:62
 msgid "About"
 msgstr "Sobre"
 
-#: NetBeansProjects/Statistics/MainFrame.cpp:62
-msgid "About Long String"
-msgstr "Sobre"
-
-#: NetBeansProjects/Statistics/MainFrame.cpp:133
+#: /home/igormq/NetBeansProjects/Statistics/MainFrame.cpp:133
 msgid "Are you sure?"
 msgstr "Você tem certeza?"
 
-#: NetBeansProjects/Statistics/wxTranslationHelper.cpp:97
+#: /home/igormq/NetBeansProjects/Statistics/wxTranslationHelper.cpp:101
 msgid "Array of language names and identifiers should have the same size."
-msgstr ""
+msgstr "Array of language names and identifiers should have the same size."
 
-#: NetBeansProjects/Statistics/MainFrame.cpp:95
-#: NetBeansProjects/Statistics/MainFrame.cpp:107
+#: /home/igormq/NetBeansProjects/Statistics/MainFrame.cpp:94
+#: /home/igormq/NetBeansProjects/Statistics/MainFrame.cpp:106
 msgid "Bernardo Dornellas Cysneiros Gomes de Amorim"
-msgstr ""
+msgstr "Bernardo Dornellas Cysneiros Gomes de Amorim"
 
-#: NetBeansProjects/Statistics/MainFrame.cpp:119
+#: /home/igormq/NetBeansProjects/Statistics/MainFrame.cpp:119
 msgid "Choose a file"
 msgstr "Escolha um arquivo"
 
-#: NetBeansProjects/Statistics/MainFrame.cpp:35
+#: /home/igormq/NetBeansProjects/Statistics/MainFrame.cpp:35
 msgid "Clea&r\tCtrl-R"
-msgstr "Limpa&r\tCtrl-R"
+msgstr "Lim&par\tCtrl-P"
 
-#: NetBeansProjects/Statistics/MainFrame.cpp:60
+#: /home/igormq/NetBeansProjects/Statistics/MainFrame.cpp:60
 msgid "Clear (Ctrl+R)"
-msgstr "Limpar (CTRL+R)"
+msgstr "Limpar (Ctrl+P)"
 
-#: NetBeansProjects/Statistics/MainFrame.cpp:60
-msgid "Clear Long String"
-msgstr "Zerar estatística"
+#: /home/igormq/NetBeansProjects/Statistics/MainFrame.cpp:60
+msgid "Clear all statistics"
+msgstr "Zerar estatísticas"
 
-#: NetBeansProjects/Statistics/MainFrame.cpp:101
+#: /home/igormq/NetBeansProjects/Statistics/MainFrame.cpp:95
 msgid "Daniel Miceli"
-msgstr ""
+msgstr "Daniel Miceli"
 
-#: NetBeansProjects/Statistics/MainFrame.cpp:105
+#: /home/igormq/NetBeansProjects/Statistics/MainFrame.cpp:96
 msgid "Daniel Pereira"
-msgstr ""
+msgstr "Daniel Pereira"
 
-#: NetBeansProjects/Statistics/wxTranslationHelper.cpp:74
+#: /home/igormq/NetBeansProjects/Statistics/wxTranslationHelper.cpp:78
 msgid "Default"
 msgstr "Padrão"
 
-#: NetBeansProjects/Statistics/MainFrame.cpp:37
+#: /home/igormq/NetBeansProjects/Statistics/MainFrame.cpp:37
 msgid "E&xit\tALT-F4"
 msgstr "&Sair\tALT-F4"
 
-#: NetBeansProjects/Statistics/MainFrame.cpp:64
-msgid "Exit Long String"
+#: /home/igormq/NetBeansProjects/Statistics/MainFrame.cpp:64
+msgid "Exit the program"
 msgstr "Sair do programa"
 
-#: NetBeansProjects/Statistics/MainFrame.cpp:64
+#: /home/igormq/NetBeansProjects/Statistics/MainFrame.cpp:64
 msgid "Exit(ALT+F4)"
 msgstr "Sair (ALT+F4)"
 
-#: NetBeansProjects/Statistics/MainFrame.cpp:94
-#: NetBeansProjects/Statistics/MainFrame.cpp:106
+#: /home/igormq/NetBeansProjects/Statistics/MainFrame.cpp:97
+#: /home/igormq/NetBeansProjects/Statistics/MainFrame.cpp:107
 msgid "Igor Macedo Quintanilha"
-msgstr ""
+msgstr "Igor Macedo Quintanilha"
 
-#: NetBeansProjects/Statistics/wxTranslationHelper.cpp:99
+#: /home/igormq/NetBeansProjects/Statistics/wxTranslationHelper.cpp:103
 msgid "Language"
 msgstr "Idioma"
 
-#: NetBeansProjects/Statistics/MainFrame.cpp:98
+#: /home/igormq/NetBeansProjects/Statistics/MainFrame.cpp:98
 msgid "Luciano Vargas dos Santos"
-msgstr ""
+msgstr "Luciano Vargas dos Santos"
 
-#: NetBeansProjects/Statistics/MainFrame.cpp:102
+#: /home/igormq/NetBeansProjects/Statistics/MainFrame.cpp:99
 msgid "Luis Fernando Mascarenhas Carneiro de Almeida"
-msgstr ""
+msgstr "Luis Fernando Mascarenhas Carneiro de Almeida"
 
-#: NetBeansProjects/Statistics/MainFrame.cpp:100
+#: /home/igormq/NetBeansProjects/Statistics/MainFrame.cpp:100
 msgid "Mauricio Lamarao Mota"
-msgstr ""
+msgstr "Mauricio Lamarao Mota"
 
-#: NetBeansProjects/Statistics/MainFrame.cpp:59
-msgid "Open Long String"
-msgstr "Selecionar um arquivo para adicionar à estatística"
+#: /home/igormq/NetBeansProjects/Statistics/MainFrame.cpp:59
+msgid "Open a file to start generating statistics"
+msgstr "Open a file to start generating statistics"
 
-#: NetBeansProjects/Statistics/MainFrame.cpp:97
+#: /home/igormq/NetBeansProjects/Statistics/MainFrame.cpp:101
 msgid "Pedro Menezes Ribeiro de Sousa"
-msgstr ""
+msgstr "Pedro Menezes Ribeiro de Sousa"
 
-#: NetBeansProjects/Statistics/MainFrame.cpp:132
+#: /home/igormq/NetBeansProjects/Statistics/MainFrame.cpp:132
 msgid "Press OK if you want erase all data"
-msgstr "Aperte OK se você tem certeza que quer zerar a estatística"
+msgstr "Aperte OK se você deseja zerar os dados"
 
-#: NetBeansProjects/Statistics/MainFrame.cpp:96
+#: /home/igormq/NetBeansProjects/Statistics/MainFrame.cpp:102
 msgid "Roberto de Moura Estevao Filho"
-msgstr ""
+msgstr "Roberto de Moura Estevao Filho"
 
-#: NetBeansProjects/Statistics/wxTranslationHelper.cpp:98
+#: /home/igormq/NetBeansProjects/Statistics/wxTranslationHelper.cpp:102
 msgid "Select the language"
-msgstr "Selecione o idioma"
+msgstr "Selecione um idioma"
 
-#: NetBeansProjects/Statistics/MainApp.cpp:42
+#: /home/igormq/NetBeansProjects/Statistics/MainApp.cpp:43
 msgid "Statistics"
 msgstr "Estatísticas"
 
-#: NetBeansProjects/Statistics/MainFrame.cpp:90
+#: /home/igormq/NetBeansProjects/Statistics/MainFrame.cpp:90
 msgid "String Statistics"
 msgstr "Contador de Palavras"
 
-#: NetBeansProjects/Statistics/MainFrame.cpp:118
+#: /home/igormq/NetBeansProjects/Statistics/MainFrame.cpp:118
 msgid "TXT files (*.txt)|*.txt"
 msgstr "Arquivo TXT (*.txt)|*.txt"
 
-#: NetBeansProjects/Statistics/MainFrame.cpp:104
+#: /home/igormq/NetBeansProjects/Statistics/MainFrame.cpp:103
 msgid "Tatiana Sciammarella"
-msgstr ""
+msgstr "Tatiana Sciammarella"
 
-#: NetBeansProjects/Statistics/MainFrame.cpp:103
+#: /home/igormq/NetBeansProjects/Statistics/MainFrame.cpp:104
 msgid "Thais Correa da Silva"
-msgstr ""
+msgstr "Thais Correa da Silva"
 
-#: NetBeansProjects/Statistics/MainFrame.cpp:92
+#: /home/igormq/NetBeansProjects/Statistics/MainFrame.cpp:92
 msgid "This program generate a statistics from strings."
 msgstr "Esse programa conta palavras"
 
-#: NetBeansProjects/Statistics/MainFrame.cpp:99
+#: /home/igormq/NetBeansProjects/Statistics/MainFrame.cpp:105
 msgid "Tiago Monnerat de Faria Lopes"
-msgstr ""
+msgstr "Tiago Monnerat de Faria Lopes"
 
-#: NetBeansProjects/Statistics/MainFrame.cpp:70
+#: /home/igormq/NetBeansProjects/Statistics/MainFrame.cpp:49
+msgid ""
+"Welcome to Statistics Calculator!\n"
+"To start go to File->Open or just press Ctrl+O"
+msgstr ""
+"Bem-Vindo ao Contador de Palavras!\n"
+"Para começar vá em Arquivo->Abrir ou pressione Ctrl+O"
+
+#: /home/igormq/NetBeansProjects/Statistics/MainFrame.cpp:70
 msgid "Welcome to Statistics!"
 msgstr "Bem-Vindo ao Contador de Palavras"
 
-#: NetBeansProjects/Statistics/wxTranslationHelper.cpp:112
+#: /home/igormq/NetBeansProjects/Statistics/MainApp.cpp:17
+msgid "statistics"
+msgstr "estatísticas"
+
+#: /home/igormq/NetBeansProjects/Statistics/wxTranslationHelper.cpp:119
 #, c-format
 msgid "wxTranslationHelper: Catalog Name = \"%s\""
-msgstr ""
+msgstr "wxTranslationHelper: Catalog Name = \"%s\""
 
-#: NetBeansProjects/Statistics/wxTranslationHelper.cpp:80
+#: /home/igormq/NetBeansProjects/Statistics/wxTranslationHelper.cpp:84
 #, c-format
 msgid "wxTranslationHelper: Directory found = \"%s\""
-msgstr ""
+msgstr "wxTranslationHelper: Directory found = \"%s\""
 
-#: NetBeansProjects/Statistics/wxTranslationHelper.cpp:108
+#: /home/igormq/NetBeansProjects/Statistics/wxTranslationHelper.cpp:115
 #, c-format
 msgid "wxTranslationHelper: Path Prefix = \"%s\""
-msgstr ""
+msgstr "wxTranslationHelper: Path Prefix = \"%s\""
 
