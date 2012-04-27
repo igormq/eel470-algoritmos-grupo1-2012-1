@@ -3,13 +3,13 @@
 = Compiling =
 
 In order to compile the program and then use it, make sure you have wxWidgets lib and build-essencial:
-*    `sudo apt-get install build-essential`
-*    `sudo apt-get install libwxgtk2.8-dev libwxgtk2.8-dbg`
+  * `sudo apt-get install build-essential`
+  * `sudo apt-get install libwxgtk2.8-dev libwxgtk2.8-dbg`
 
 Now download 'statistics0.1.tar.gz' and type:
-*    `tar -xzf statistics0.1.tar.gz`
-*    `cd statistics0.1`
-*    `make`
+  * `tar -xzf statistics0.1.tar.gz`
+  * `cd statistics0.1`
+  * `make`
 
 Now you can run the program by typing:
-*    `./statistics`
+  * `./statistics`
